@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Christian Daily Guide — Principled Leadership Assessment Portal, Batch 2. 21-Day Principled Leadership Course, Final Assessment.">
+<meta name="description" content="Christian Daily Guide — Principled Leadership Assessment Portal, Batch 2. Final Online Assessment, Section A (25 objective questions).">
 <title>CDG Principled Leadership Assessment Portal — Batch 2</title>
 <style>
   /* ================= BASE ================= */
@@ -42,7 +42,7 @@
     -webkit-font-smoothing:antialiased;
   }
 
-  .wrap{ width:100%; max-width:940px; margin:0 auto; padding:0 16px; }
+  .wrap{ width:100%; max-width:920px; margin:0 auto; padding:0 16px; }
   .hidden{ display:none !important; }
   .print-only{ display:none; }
 
@@ -107,7 +107,7 @@
 
   .info-list{
     list-style:none; margin:18px 0; padding:0;
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:10px;
   }
   .info-list li{
     background:#fbfcfe; border:1px solid var(--line);
@@ -143,31 +143,13 @@
     box-shadow:0 0 0 3px rgba(179,38,30,.12);
   }
 
-  textarea{
-    width:100%; min-height:130px; padding:12px 14px;
-    font-family:inherit; font-size:15px; line-height:1.6;
-    color:var(--ink); background:#fff;
-    border:1px solid var(--line); border-radius:10px;
-    resize:vertical; transition:border-color .15s, box-shadow .15s;
-  }
-  textarea:focus{
-    outline:none; border-color:var(--navy-3);
-    box-shadow:0 0 0 3px rgba(29,78,137,.16);
-  }
-  textarea.invalid{
-    border-color:var(--red);
-    box-shadow:0 0 0 3px rgba(179,38,30,.12);
-  }
-
   .error{
     color:var(--red); font-size:13px; font-weight:600;
-    margin:10px 0 0; background:var(--red-bg);
+    margin:8px 0 0; background:var(--red-bg);
     border:1px solid var(--red-line);
-    border-radius:8px; padding:10px 13px;
+    border-radius:8px; padding:9px 12px;
   }
   .error[hidden]{ display:none; }
-  .error ul{ margin:6px 0 0; padding-left:18px; }
-  .error li{ margin-bottom:3px; font-weight:600; }
 
   /* ================= BUTTONS ================= */
   .btn{
@@ -187,7 +169,7 @@
   .btn-block{ width:100%; }
 
   .btn-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
-  .btn-row .btn{ flex:1 1 210px; }
+  .btn-row .btn{ flex:1 1 200px; }
 
   /* ================= NOTICE ================= */
   .notice{
@@ -202,6 +184,15 @@
   .notice ul{ margin:0; padding-left:18px; font-size:13.5px; }
   .notice li{ margin-bottom:5px; }
   .notice li:last-child{ margin-bottom:0; }
+  .notice p{ margin:0; font-size:13.5px; }
+
+  .callout{
+    margin:18px 0; background:#eef4fb;
+    border:1px solid #d6e3f3; border-left:4px solid var(--navy-3);
+    border-radius:10px; padding:13px 15px;
+    font-size:14px; color:#22384f;
+  }
+  .callout strong{ color:var(--navy); }
 
   /* ================= ASSESSMENT HEAD ================= */
   .assess-head{
@@ -226,23 +217,12 @@
     font-size:13px; font-weight:700; color:var(--muted); margin-bottom:8px;
   }
   .progress-top .count{ color:var(--navy-3); }
-  .progress-sub{ font-size:12px; color:var(--muted); margin:7px 0 0; font-weight:600; }
   .bar{ height:10px; background:#e6ebf1; border-radius:999px; overflow:hidden; }
   .bar-fill{
     height:100%; width:0%; border-radius:999px;
     background:linear-gradient(90deg,#1d4e89,#2f7fd1);
     transition:width .25s ease;
   }
-
-  /* ================= SECTION BAR ================= */
-  .section-bar{
-    background:linear-gradient(135deg,#0b2545,#1d4e89);
-    color:#fff; border-radius:12px;
-    padding:15px 18px; margin:26px 0 14px;
-    box-shadow:var(--shadow);
-  }
-  .section-bar h2{ color:#fff; font-size:17px; margin:0 0 3px; }
-  .section-bar p{ margin:0; font-size:12.5px; color:#c8d6e5; letter-spacing:.2px; }
 
   /* ================= QUESTION CARDS ================= */
   .q-card{
@@ -251,8 +231,7 @@
     padding:18px; margin:0 0 14px;
     transition:border-color .15s, box-shadow .15s;
   }
-  .q-card.unanswered,
-  .q-block.unanswered{
+  .q-card.unanswered{
     border-color:#e0a800;
     box-shadow:0 0 0 3px rgba(224,168,0,.16);
   }
@@ -266,14 +245,6 @@
   .q-text{
     display:block; font-size:16px; font-weight:700;
     color:var(--navy); line-height:1.45;
-  }
-
-  .marks-tag{
-    display:inline-block; font-size:10.5px; font-weight:800;
-    letter-spacing:.5px; text-transform:uppercase;
-    background:#eef4fb; color:var(--navy-3);
-    border:1px solid #d6e3f3; border-radius:999px;
-    padding:1px 8px; margin-left:6px; vertical-align:middle;
   }
 
   .options{ display:grid; gap:9px; margin-top:14px; }
@@ -296,34 +267,7 @@
   .option-text{ flex:1; font-size:15px; line-height:1.5; }
   .option.selected{ border-color:var(--navy-3); background:#eef4fb; }
 
-  /* ================= WRITTEN QUESTIONS ================= */
-  .q-block{
-    background:#fff; border:1px solid var(--line);
-    border-radius:12px; box-shadow:var(--shadow);
-    padding:18px; margin:0 0 14px;
-    transition:border-color .15s, box-shadow .15s;
-  }
-  .qb-text{
-    font-size:15.5px; font-weight:700; color:var(--navy);
-    line-height:1.5; margin:0 0 6px;
-  }
-  .scripture-ref{
-    font-size:12.5px; font-weight:800; color:var(--navy-3);
-    letter-spacing:.5px; text-transform:uppercase; margin:0 0 6px;
-  }
-  .parts{
-    margin:8px 0 12px; padding-left:18px;
-    font-size:14.5px; color:#2c3e50;
-  }
-  .parts li{ margin-bottom:4px; }
-  .hint{ font-size:12.5px; color:var(--muted); margin:0 0 10px; }
-
-  .wc{
-    font-size:12.5px; font-weight:700; color:var(--muted);
-    margin:7px 0 0; letter-spacing:.2px;
-  }
-  .wc.ok{ color:var(--green); }
-  .wc.low{ color:var(--amber); }
+  .submit-card{ margin-top:6px; }
 
   /* ================= RESULTS ================= */
   .result-head{ text-align:center; margin-bottom:6px; }
@@ -339,11 +283,10 @@
     margin:18px 0; border:1px solid;
   }
   .status-banner h3{
-    margin:0 0 4px; font-size:18px; letter-spacing:.7px; font-weight:800;
+    margin:0; font-size:19px; letter-spacing:.8px; font-weight:800;
   }
-  .status-banner p{ margin:0; font-size:13.5px; font-weight:600; opacity:.95; }
   .status-banner.pass{ background:var(--green-bg); border-color:var(--green-line); color:var(--green); }
-  .status-banner.pending{ background:var(--amber-bg); border-color:var(--amber-line); color:var(--amber); }
+  .status-banner.fail{ background:var(--red-bg); border-color:var(--red-line); color:var(--red); }
 
   .details-grid{
     display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr));
@@ -364,23 +307,19 @@
   }
 
   .score-grid{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(105px,1fr));
     gap:10px; margin-bottom:16px;
   }
   .score-box{
     background:#fbfcfe; border:1px solid var(--line);
-    border-radius:12px; padding:15px 10px; text-align:center;
+    border-radius:12px; padding:14px 10px; text-align:center;
   }
   .score-box .num{
-    font-size:25px; font-weight:800; color:var(--navy); line-height:1.15;
+    font-size:26px; font-weight:800; color:var(--navy); line-height:1.1;
   }
   .score-box .cap{
     font-size:10.5px; font-weight:800; letter-spacing:.6px;
     text-transform:uppercase; color:var(--muted); margin-top:5px;
-  }
-  .score-box .cap-2{
-    display:block; font-size:11px; color:var(--muted);
-    font-weight:600; margin-top:2px; text-transform:none; letter-spacing:0;
   }
 
   .result-message{
@@ -389,9 +328,14 @@
     font-size:14.5px; color:#22384f; margin-bottom:12px;
   }
 
+  .equiv{
+    font-size:13.5px; font-weight:600; color:var(--muted);
+    margin:0 0 12px;
+  }
+
   .checkline{
     display:flex; align-items:flex-start; gap:9px;
-    font-size:13.5px; color:var(--muted); margin-top:12px;
+    font-size:13.5px; color:var(--muted); margin-top:14px;
     cursor:pointer; font-weight:600;
   }
   .checkline input{
@@ -458,26 +402,6 @@
   }
   .review-exp strong{ color:var(--navy); }
 
-  /* ================= SUBMISSION (WRITTEN ANSWERS) ================= */
-  .sub-item{
-    border:1px solid var(--line); border-left:5px solid var(--navy-3);
-    border-radius:10px; padding:14px 15px; margin-bottom:12px; background:#fff;
-  }
-  .sub-item:last-child{ margin-bottom:0; }
-  .sub-head{
-    font-size:11.5px; font-weight:800; letter-spacing:.7px;
-    text-transform:uppercase; color:var(--navy-3); margin:0 0 6px;
-  }
-  .sub-q{
-    font-size:14px; font-weight:700; color:var(--navy);
-    margin:0 0 8px; line-height:1.45;
-  }
-  .sub-a{
-    font-size:14px; color:#2c3e50; margin:0;
-    white-space:pre-wrap; word-break:break-word;
-    background:#f7f9fc; border-radius:8px; padding:11px 13px; line-height:1.6;
-  }
-
   /* ================= FOOTER ================= */
   .site-footer{
     background:var(--navy); color:#c8d6e5;
@@ -500,17 +424,15 @@
   @media (max-width:520px){
     h1{ font-size:21px; }
     .card{ padding:17px; border-radius:12px; }
-    .q-card,.q-block{ padding:15px; }
+    .q-card{ padding:15px; }
     .btn-row .btn{ flex:1 1 100%; }
     .logo-text small{ font-size:10.5px; }
     .logo-mark{ width:40px; height:40px; font-size:13px; }
     .score-box .num{ font-size:22px; }
     .result-head h2{ font-size:18px; }
-    .status-banner h3{ font-size:16px; }
+    .status-banner h3{ font-size:17px; }
     .option-text{ font-size:14.5px; }
     main{ padding:16px 0 30px; }
-    .section-bar{ padding:13px 15px; }
-    .section-bar h2{ font-size:15.5px; }
   }
 
   /* ================= PRINT ================= */
@@ -539,9 +461,8 @@
 
     #welcome, #assessment, .no-print, .site-footer{ display:none !important; }
 
-    #reviewCard, #submissionCard{ display:none !important; }
+    #reviewCard{ display:none !important; }
     body.print-review #reviewCard{ display:block !important; page-break-before:always; }
-    body.print-written #submissionCard{ display:block !important; page-break-before:always; }
 
     .card{
       box-shadow:none !important; border:1px solid #bbb !important;
@@ -549,27 +470,26 @@
       padding:10px 12px !important;
       page-break-inside:avoid; break-inside:avoid;
     }
-    #reviewCard, #submissionCard{
+    #reviewCard{
       border:0 !important; padding:0 !important; background:#fff !important;
     }
 
-    .status-banner, .score-box, .detail, .review-item, .sub-item{
+    .status-banner, .score-box, .detail, .review-item{
       -webkit-print-color-adjust:exact; print-color-adjust:exact;
     }
     .status-banner{ padding:10px !important; margin:10px 0 !important; }
-    .status-banner h3{ font-size:14px !important; }
-    .status-banner p{ font-size:10.5px !important; }
+    .status-banner h3{ font-size:15px !important; }
     .score-grid, .details-grid{ gap:6px !important; margin-bottom:10px !important; }
-    .score-box .num{ font-size:18px !important; }
-    .result-message{ font-size:11px !important; padding:9px 11px !important; }
-    .disclaimer{ font-size:9.5px !important; margin-top:10px !important; padding-top:8px !important; }
-
-    .review-item, .sub-item{
+    .score-box .num{ font-size:19px !important; }
+    .result-message{ font-size:11.5px !important; padding:9px 11px !important; }
+    .equiv{ font-size:10.5px !important; }
+    .disclaimer{ font-size:10px !important; margin-top:10px !important; padding-top:8px !important; }
+    .review-item{
       page-break-inside:avoid; break-inside:avoid;
       margin-bottom:7px !important; padding:9px 10px !important;
     }
-    .review-text, .sub-q{ font-size:11px !important; }
-    .review-exp, .sub-a{ font-size:10.5px !important; padding:7px 9px !important; }
+    .review-text{ font-size:11.5px !important; }
+    .review-exp{ font-size:10.5px !important; padding:7px 9px !important; }
 
     .print-only{ display:block !important; }
   }
@@ -604,22 +524,30 @@
        ============================================================ -->
   <section id="welcome" class="card" aria-labelledby="welcomeHeading">
     <span class="kicker">21-Day Principled Leadership Course</span>
-    <h1 id="welcomeHeading">Final Assessment — Batch 2</h1>
+    <h1 id="welcomeHeading">Final Online Assessment — Batch 2</h1>
     <p class="muted" style="margin-top:-4px;">Christian Daily Guide 📜 &middot; Principled Leadership Assessment Portal</p>
 
     <p class="lead">
       Welcome, and congratulations on completing the 21-Day Principled Leadership Course.
-      This final assessment has four sections — multiple choice, short answers, biblical
-      understanding, and practical leadership reflection. Answer every question honestly and
-      in your own words, then submit to see your Section A result and a full answer review.
+      This portal contains the <strong>Section A objective assessment</strong> — 25 multiple-choice
+      questions worth 4 marks each (100 marks total). Answer every question, submit, and your
+      score will be calculated immediately, with a full answer review.
     </p>
 
     <ul class="info-list">
       <li><span>Course</span><strong>21-Day Principled Leadership Course</strong></li>
       <li><span>Batch</span><strong>Batch 2</strong></li>
-      <li><span>Duration</span><strong>45 minutes</strong></li>
-      <li><span>Total marks</span><strong>100</strong></li>
+      <li><span>Questions</span><strong>25 (all compulsory)</strong></li>
+      <li><span>Marks</span><strong>100 (4 per question)</strong></li>
+      <li><span>Pass mark</span><strong>70% &middot; 70 out of 100</strong></li>
     </ul>
+
+    <div class="callout">
+      <strong>Sections B, C, D and the Final Declaration are submitted offline.</strong><br>
+      The written essay questions are not part of this portal. They will be sent to you through
+      the CDG Batch 2 WhatsApp group. Complete them as instructed and submit them there.
+      This online portal covers <strong>only the objective questions in Section A</strong>.
+    </div>
 
     <form id="regForm" novalidate>
       <div class="field">
@@ -642,92 +570,56 @@
                maxlength="40" autocomplete="off">
       </div>
 
-      <button type="submit" class="btn btn-primary btn-block">Start Assessment</button>
+      <button type="submit" class="btn btn-primary btn-block">Start Objective Assessment</button>
     </form>
 
     <div class="notice">
       <h3>Important — please read before you begin</h3>
       <ul>
-        <li><strong>Section A (20 marks)</strong> is multiple choice and is marked automatically in your browser.</li>
-        <li><strong>Sections B, C and D (80 marks)</strong> are written answers. They are <strong>not</strong> marked automatically — they are recorded and printed for review by the CDG administrator.</li>
-        <li>Nothing is sent to the CDG administrator and nothing is stored in a central database. If you close or refresh the page, your answers are lost — print or save your submission first.</li>
-        <li>Browser-side answers can be inspected or manipulated. This is a learning and self-assessment tool, <strong>not</strong> a secure examination platform.</li>
-        <li>Your printout is a personal submission record only. It is <strong>not</strong> an official certificate.</li>
+        <li>Your answers are marked inside your own browser. Results are <strong>not</strong> sent to the CDG administrator.</li>
+        <li>Nothing is stored in a central database. If you close or refresh the page, your result is lost — print or save it first.</li>
+        <li>Browser-side answers can be inspected or manipulated, so this is a learning and self-assessment tool, <strong>not</strong> a secure examination platform.</li>
+        <li>Your printout is a personal record of your objective score only. It is an<strong>admin</strong>  official certificate.</li>
       </ul>
     </div>
   </section>
 
   <!-- ============================================================
-       ASSESSMENT
+       ASSESSMENT (OBJECTIVE ONLY)
        ============================================================ -->
   <section id="assessment" class="hidden" aria-labelledby="assessHeading">
 
     <div class="card">
       <div class="assess-head">
         <div>
-          <h2 id="assessHeading" style="margin-bottom:4px;">Final Assessment</h2>
+          <h2 id="assessHeading" style="margin-bottom:4px;">Section A — Objective Questions</h2>
           <p class="assess-who" id="assessWho"></p>
         </div>
       </div>
 
       <div class="meta-chips">
-        <span class="chip">Duration: 45 minutes</span>
-        <span class="chip">Total marks: 100</span>
-        <span class="chip">All questions compulsory</span>
+        <span class="chip">25 questions</span>
+        <span class="chip">4 marks each</span>
+        <span class="chip">100 marks total</span>
+        <span class="chip">Pass mark: 70%</span>
       </div>
 
       <div class="progress-block">
         <div class="progress-top">
-          <span>Overall progress</span>
-          <span class="count" id="progressCount" aria-live="polite">0/23 items complete</span>
+          <span>Progress</span>
+          <span class="count" id="progressCount" aria-live="polite">0/25 answered</span>
         </div>
         <div class="bar" id="progressBar" role="progressbar"
-             aria-valuemin="0" aria-valuemax="23" aria-valuenow="0"
-             aria-label="Number of assessment items completed">
+             aria-valuemin="0" aria-valuemax="25" aria-valuenow="0"
+             aria-label="Number of questions answered">
           <div class="bar-fill" id="barFill"></div>
         </div>
-        <p class="progress-sub" id="progressSub">Section A: 0/10 answered &middot; Written answers: 0/13</p>
       </div>
     </div>
 
-    <form id="assessmentForm" novalidate>
+    <form id="quizForm" novalidate>
+      <div id="questionsContainer"></div>
 
-      <!-- SECTION A -->
-      <div class="section-bar">
-        <h2>Section A — Multiple-Choice Questions</h2>
-        <p>10 questions &times; 2 marks = 20 marks &middot; Choose one correct answer per question.</p>
-      </div>
-      <div id="sectionAList"></div>
-
-      <!-- SECTION B -->
-      <div class="section-bar">
-        <h2>Section B — Short-Answer Questions</h2>
-        <p>5 questions &times; 6 marks = 30 marks &middot; Answer briefly and clearly in your own words.</p>
-      </div>
-      <div id="sectionBList"></div>
-
-      <!-- SECTION C -->
-      <div class="section-bar">
-        <h2>Section C — Biblical Understanding and Application</h2>
-        <p>4 questions &times; 5 marks = 20 marks &middot; Support your answers with the passages given.</p>
-      </div>
-      <div id="sectionCList"></div>
-
-      <!-- SECTION D -->
-      <div class="section-bar">
-        <h2>Section D — Practical Leadership and Personal Reflection</h2>
-        <p>3 questions &times; 10 marks = 30 marks &middot; Answer thoughtfully and use practical examples.</p>
-      </div>
-      <div id="sectionDList"></div>
-
-      <!-- DECLARATION -->
-      <div class="section-bar">
-        <h2>Final Declaration</h2>
-        <p>Complete the statement below in your own words.</p>
-      </div>
-      <div id="sectionEList"></div>
-
-      <!-- SUBMIT -->
       <div class="card submit-card">
         <p class="error" id="submitError" role="alert" hidden></p>
         <div class="btn-row">
@@ -735,12 +627,10 @@
           <button type="button" class="btn btn-ghost" id="restartBtn1">Restart Assessment</button>
         </div>
         <p class="muted small" style="margin:14px 0 0;">
-          Every question in Sections A, B, C and D, plus the Final Declaration, must be completed
-          before you can submit. Section A is marked instantly; written answers are prepared for
-          the administrator's review.
+          All 25 questions are compulsory. Each correct answer is worth 4 marks (100 marks total).
+          The pass mark is 70% — at least 18 correct answers (72 marks).
         </p>
       </div>
-
     </form>
   </section>
 
@@ -752,13 +642,12 @@
     <div class="card result-card" id="resultCard">
       <div class="result-head">
         <p class="brand-line">Christian Daily Guide 📜</p>
-        <h2 id="resultsHeading">Final Assessment — Submission Summary</h2>
-        <p class="muted">21-Day Principled Leadership Course &middot; Batch 2</p>
+        <h2 id="resultsHeading">Final Online Assessment Result</h2>
+        <p class="muted">21-Day Principled Leadership Course &middot; Batch 2 &middot; Section A</p>
       </div>
 
-      <div class="status-banner pass" id="statusBanner" role="status">
-        <h3 id="statusTitle">SUBMISSION COMPLETE</h3>
-        <p id="statusNote">All 23 items answered.</p>
+      <div class="status-banner" id="statusBanner" role="status">
+        <h3 id="statusTitle">ASSESSMENT PASSED</h3>
       </div>
 
       <div class="details-grid">
@@ -783,68 +672,49 @@
           <span class="val">Batch 2</span>
         </div>
         <div class="detail">
-          <span class="lbl">Date Submitted</span>
+          <span class="lbl">Assessment Date</span>
           <span class="val" id="rDate">—</span>
-        </div>
-        <div class="detail">
-          <span class="lbl">Time Used</span>
-          <span class="val" id="rTime">—</span>
-        </div>
-        <div class="detail">
-          <span class="lbl">Total Marks</span>
-          <span class="val">100</span>
         </div>
       </div>
 
       <div class="score-grid">
         <div class="score-box">
-          <div class="num" id="rSectionA">0/20</div>
-          <div class="cap">Section A</div>
-          <span class="cap-2">Marked automatically</span>
+          <div class="num" id="rScore">0/100</div>
+          <div class="cap">Score</div>
         </div>
         <div class="score-box">
-          <div class="num" id="rWritten">0/13</div>
-          <div class="cap">Written Answers</div>
-          <span class="cap-2">Submitted for review</span>
+          <div class="num" id="rPercent">0%</div>
+          <div class="cap">Percentage</div>
         </div>
         <div class="score-box">
-          <div class="num" id="rPending">80</div>
-          <div class="cap">Marks Pending</div>
-          <span class="cap-2">Sections B, C &amp; D</span>
+          <div class="num" id="rCorrect">0/25</div>
+          <div class="cap">Correct Answers</div>
         </div>
       </div>
 
       <p class="result-message" id="rMessage"></p>
+      <p class="equiv" id="rEquiv">Pass mark: 70 out of 100 — at least 18 correct answers required.</p>
 
-      <div class="notice no-print" style="margin-top:0;">
-        <h3>How your final result is determined</h3>
-        <ul>
-          <li>Section A is marked instantly in your browser: 2 marks per correct answer, 20 marks total.</li>
-          <li>Sections B, C and D contain written answers worth 80 marks. These cannot be marked by a browser and are reviewed by the CDG administrator.</li>
-          <li>Your final total and pass/fail status are therefore <strong>not</strong> shown here. Print or save this submission and send it to the administrator for marking.</li>
-        </ul>
+      <div class="callout" style="margin-top:0;">
+        <strong>Remember:</strong> this result covers the Section A objective assessment only.
+        The written essays (Sections B, C, D and the Final Declaration) are submitted offline
+        through the CDG Batch 2 WhatsApp group.
       </div>
 
       <div class="btn-row no-print">
-        <button type="button" class="btn btn-primary" id="printBtn">Print / Save Submission</button>
+        <button type="button" class="btn btn-primary" id="printBtn">Print / Save Result</button>
         <button type="button" class="btn btn-ghost" id="restartBtn2">Restart Assessment</button>
       </div>
 
-      <div class="no-print">
-        <label class="checkline" for="includeReview">
-          <input type="checkbox" id="includeReview" checked>
-          <span>Include the Section A answer review in the printout</span>
-        </label>
-        <label class="checkline" for="includeWritten">
-          <input type="checkbox" id="includeWritten" checked>
-          <span>Include my written answers in the printout (recommended — needed for marking)</span>
-        </label>
-      </div>
+      <label class="checkline no-print" for="includeReview">
+        <input type="checkbox" id="includeReview" checked>
+        <span>Include the answer review in the printout</span>
+      </label>
 
       <p class="disclaimer">
-        <strong>Note:</strong> This submission was prepared locally in your browser. It has not been
-        sent to the CDG administrator, is not stored in a central database, and is not an official
-        certificate or independently verified proof of completion.
+        <strong>Note:</strong> This objective result was calculated locally in your browser. It has
+        not been sent to the CDG administrator, is not stored in a central database, and is not an
+        official certificate or independently verified proof of completion.
       </p>
 
       <p class="print-only print-footer">
@@ -854,21 +724,12 @@
     </div>
 
     <div class="card" id="reviewCard">
-      <h2>Section A — Answer Review</h2>
+      <h2>Answer Review &amp; Feedback</h2>
       <p class="muted small" style="margin-top:-4px;">
-        Correct answers are highlighted in green, incorrect answers in red.
+        Review each question below. Correct answers are highlighted in green, incorrect answers in red.
       </p>
       <div id="reviewContainer"></div>
     </div>
-
-    <div class="card" id="submissionCard">
-      <h2>Written Answers Submitted</h2>
-      <p class="muted small" style="margin-top:-4px;">
-        These answers are recorded for review by the CDG administrator.
-      </p>
-      <div id="submissionContainer"></div>
-    </div>
-
   </section>
 
 </main>
@@ -878,7 +739,7 @@
   <div class="wrap">
     <p class="foot-brand">Christian Daily Guide 📜</p>
     <p class="foot-line">Growing in character. Leading through service. Remaining faithful to Christ.</p>
-    <p class="foot-note">Principled Leadership Assessment Portal &middot; Batch 2 &middot; Version 1 (frontend prototype)</p>
+    <p class="foot-note">Principled Leadership Assessment Portal &middot; Batch 2 &middot; Section A &middot; Version 1 (frontend prototype)</p>
   </div>
 </footer>
 
@@ -887,249 +748,300 @@
   'use strict';
 
   /* =========================================================
-     SECTION A — MULTIPLE CHOICE (10 × 2 = 20 marks)
+     SECTION A — 25 OBJECTIVE QUESTIONS × 4 MARKS = 100 MARKS
      correct = index of the correct option (0-based)
      ========================================================= */
-  var SECTION_A = [
+  var QUESTIONS = [
     {
-      text: "What is the foundation of principled Christian leadership?",
+      text: "What is the strongest foundation for principled Christian leadership?",
       options: [
-        "Position and authority",
-        "Popularity among people",
-        "God's Word and godly character",
-        "Personal success"
-      ],
-      correct: 2,
-      explanation: "Principled Christian leadership is built on God's Word and godly character — not on position, popularity or personal success. An overseer must hold firmly to the trustworthy message and be blameless (Titus 1:7–9; Psalm 119:105)."
-    },
-    {
-      text: "According to Mark 10:43–45, what should characterise a Christian leader?",
-      options: [
-        "The ability to control others",
-        "A willingness to serve others",
-        "The pursuit of recognition",
-        "The demand for respect"
+        "The ability to influence people's decisions",
+        "God's Word, godly character, and obedience to Christ",
+        "The recognition received from followers",
+        "The ability to manage people effectively"
       ],
       correct: 1,
-      explanation: "In Mark 10:43–45 Jesus says, \"Whoever wants to become great among you must be your servant... For even the Son of Man did not come to be served, but to serve.\" Greatness in Christ's kingdom is measured by service, not control."
+      explanation: "Christian leadership is built on God's Word, godly character and obedience to Christ — not on influence, recognition or management skill. An overseer must hold firmly to the trustworthy message (Titus 1:7–9; Psalm 119:105)."
     },
     {
-      text: "What does integrity mean in leadership?",
+      text: "According to Mark 10:43–45, what distinguishes leadership in the kingdom of God?",
       options: [
-        "Doing what is right even when nobody is watching",
-        "Pleasing everyone at all costs",
-        "Hiding mistakes to protect one's reputation",
-        "Avoiding responsibility"
-      ],
-      correct: 0,
-      explanation: "Integrity is consistency between what you believe, say and do — especially when no one is watching. God desires truth in the inward being (Psalm 51:6), and the integrity of the upright guides them (Proverbs 11:3)."
-    },
-    {
-      text: "Which of the following demonstrates accountability?",
-      options: [
-        "Blaming others for personal mistakes",
-        "Ignoring correction",
-        "Refusing to explain one's decisions",
-        "Accepting responsibility for one's actions"
-      ],
-      correct: 3,
-      explanation: "Accountability means answering for your actions and accepting responsibility instead of shifting blame. Whoever conceals their sins does not prosper, but whoever confesses and renounces them finds mercy (Proverbs 28:13; Romans 14:12)."
-    },
-    {
-      text: "According to Luke 16:10, what does faithfulness in small things demonstrate?",
-      options: [
-        "That small responsibilities are unimportant",
-        "That recognition should come first",
-        "Trustworthiness in handling greater responsibility",
-        "That a leader should avoid difficult tasks"
+        "Leaders must always make the final decision",
+        "Leaders should avoid positions of authority",
+        "Greatness is demonstrated through humble service to others",
+        "Leaders should expect special treatment because of their responsibilities"
       ],
       correct: 2,
-      explanation: "Luke 16:10 says, \"Whoever can be trusted with very little can also be trusted with much.\" Faithfulness in small matters proves readiness for greater responsibility."
+      explanation: "Jesus says, \"Whoever wants to become great among you must be your servant... For even the Son of Man did not come to be served, but to serve\" (Mark 10:43–45). Greatness in God's kingdom is measured by humble service."
     },
     {
-      text: "What should a principled leader do when they make a mistake?",
+      text: "A leader discovers that a close friend has violated an important group rule. What is the most principled response?",
       options: [
-        "Pretend nothing happened",
-        "Acknowledge the mistake, correct it, and learn from it",
-        "Blame a team member",
-        "Hide the truth"
+        "Ignore the violation to protect the friendship",
+        "Publicly embarrass the friend to discourage others",
+        "Apply the rules fairly while treating the friend with respect",
+        "Ask another administrator to handle it so the friendship remains unaffected"
+      ],
+      correct: 2,
+      explanation: "A principled leader applies the rules fairly and impartially while treating the person with respect. Scripture commands impartial judgment (Deuteronomy 1:17) and speaking the truth in love (Ephesians 4:15)."
+    },
+    {
+      text: "Which situation best demonstrates integrity?",
+      options: [
+        "Admitting a mistake and correcting it, even when doing so may damage one's reputation",
+        "Keeping quiet about an error because nobody has complained",
+        "Changing a report to make one's performance look better",
+        "Doing the right thing only when a senior leader is present"
+      ],
+      correct: 0,
+      explanation: "Integrity means truthfulness and consistency even at personal cost. Whoever conceals their sins does not prosper, but whoever confesses and renounces them finds mercy (Proverbs 28:13; 1 John 1:9)."
+    },
+    {
+      text: "According to Luke 16:10, why should leaders take small responsibilities seriously?",
+      options: [
+        "Small duties are the quickest way to gain recognition",
+        "Every small task must receive public praise",
+        "Minor responsibilities are more important than major ones",
+        "Faithfulness in small things demonstrates trustworthiness"
+      ],
+      correct: 3,
+      explanation: "Luke 16:10 says, \"Whoever can be trusted with very little can also be trusted with much.\" Faithfulness in small matters demonstrates trustworthiness for greater responsibility."
+    },
+    {
+      text: "What is the most appropriate response when a leader receives constructive correction?",
+      options: [
+        "Defend every decision to maintain authority",
+        "Listen carefully, evaluate the correction, and make necessary changes",
+        "Withdraw from the team to avoid further criticism",
+        "Accept the correction publicly but refuse to change privately"
       ],
       correct: 1,
-      explanation: "Owning a mistake, correcting it and learning from it builds trust. Cover-ups and blame-shifting damage relationships and witness (Proverbs 28:13; 1 John 1:9)."
+      explanation: "A teachable leader listens carefully, evaluates the correction and changes where needed. \"Let a wise person hear and increase in learning\" (Proverbs 9:9; James 1:19)."
     },
     {
-      text: "Which of these is an example of servant leadership?",
+      text: "An administrator repeatedly fails to complete assigned duties. What should the team leader do first?",
       options: [
-        "Expecting others to do everything",
-        "Using authority to intimidate people",
-        "Seeking praise for every good deed",
-        "Serving others with humility and love"
-      ],
-      correct: 3,
-      explanation: "Servant leadership means serving others with humility and love, following Christ's own example (Mark 10:45; Philippians 2:3–5)."
-    },
-    {
-      text: "What is the best way to handle disagreement among team members?",
-      options: [
-        "Listen fairly and seek a peaceful resolution",
-        "Take sides immediately",
-        "Ignore the issue permanently",
-        "Publicly embarrass those involved"
-      ],
-      correct: 0,
-      explanation: "A principled leader listens fairly to both sides and pursues truth and peace. The first to present his case seems right until another comes forward and questions him (Proverbs 18:17); blessed are the peacemakers (Matthew 5:9)."
-    },
-    {
-      text: "A Christian leader should lead by example rather than words alone.",
-      options: [
-        "True",
-        "False"
-      ],
-      correct: 0,
-      explanation: "This statement is true. Leaders reproduce what they are, not merely what they say. Paul wrote, \"Follow my example, as I follow the example of Christ\" (1 Corinthians 11:1; 1 Peter 5:2–3)."
-    },
-    {
-      text: "What should motivate a Christian leader's service?",
-      options: [
-        "Competition with other leaders",
-        "The desire for fame",
-        "Love for God and people",
-        "The desire to control others"
+        "Remove the administrator immediately without discussion",
+        "Ignore the issue because everyone has personal challenges",
+        "Discuss the problem privately, understand the cause, and agree on clear expectations",
+        "Complain about the administrator to other team members"
       ],
       correct: 2,
-      explanation: "Love for God and for people is the true motive for Christian service — loving God with all your heart and your neighbour as yourself (Matthew 22:37–39; 2 Corinthians 5:14)."
-    }
-  ];
-
-  /* =========================================================
-     SECTION B — SHORT ANSWER (5 × 6 = 30 marks)
-     ========================================================= */
-  var SECTION_B = [
-    {
-      marks: 6,
-      min: 25,
-      text: "In your own words, explain what principled Christian leadership means.",
-      hint: "Write 2–4 sentences. Mention God's Word, character and service."
+      explanation: "The first step is a private, respectful conversation aimed at understanding the cause and setting clear expectations. Jesus teaches us to go to the person privately first (Matthew 18:15; Galatians 6:1)."
     },
     {
-      marks: 6,
-      min: 30,
-      text: "Mention and explain three qualities every Christian leader should possess.",
-      hint: "Name each quality and explain it in one or two sentences."
-    },
-    {
-      marks: 6,
-      min: 25,
-      text: "What is the difference between being a leader by position and being a leader by character?",
-      hint: "Contrast title and authority with influence and example."
-    },
-    {
-      marks: 6,
-      min: 25,
-      text: "Explain why accountability is important in Christian leadership.",
-      hint: "Consider trust, growth, correction and protection of others."
-    },
-    {
-      marks: 6,
-      min: 25,
-      text: "Mention three practical ways a Christian leader can demonstrate faithfulness in everyday responsibilities.",
-      hint: "Give three concrete, practical actions."
-    }
-  ];
-
-  /* =========================================================
-     SECTION C — BIBLICAL UNDERSTANDING (4 × 5 = 20 marks)
-     ========================================================= */
-  var SECTION_C = [
-    {
-      marks: 5,
-      min: 30,
-      ref: "Mark 10:43–45",
-      text: "What does Jesus teach about greatness and service in this passage? How can a CDG administrator apply this teaching?",
-      hint: "Explain the teaching, then give one practical application."
-    },
-    {
-      marks: 5,
-      min: 30,
-      ref: "Luke 16:10",
-      text: "Explain the meaning of being faithful in little things. Give one practical example from your responsibilities as an administrator.",
-      hint: "Explain the principle, then give a concrete example."
-    },
-    {
-      marks: 5,
-      min: 30,
-      ref: "Proverbs 11:3",
-      text: "The verse teaches that the integrity of the upright guides them. Explain how integrity can guide a leader when making a difficult decision.",
-      hint: "Describe a difficult decision and how integrity shapes it."
-    },
-    {
-      marks: 5,
-      min: 30,
-      ref: "Galatians 6:9",
-      text: "How can this passage encourage an administrator who feels tired, discouraged, or unappreciated while serving?",
-      hint: "Explain the promise in the verse and how it strengthens perseverance."
-    }
-  ];
-
-  /* =========================================================
-     SECTION D — PRACTICAL LEADERSHIP & REFLECTION (3 × 10 = 30)
-     ========================================================= */
-  var SECTION_D = [
-    {
-      marks: 10,
-      min: 50,
-      text: "Leadership Challenge — Imagine that an administrator in Christian Daily Guide repeatedly fails to perform assigned duties and does not communicate with the team. As a fellow administrator or leader:",
-      parts: [
-        "a. How would you address the situation?",
-        "b. How would you balance correction with love and understanding?",
-        "c. What biblical principle would guide your response?"
+      text: "Which statement best explains the difference between leadership by position and leadership by character?",
+      options: [
+        "Position gives responsibility, but character determines how that responsibility is exercised",
+        "Position is always more important than character",
+        "Character matters only when a leader has no authority",
+        "A person with a leadership title does not need to earn trust"
       ],
-      hint: "Answer all three parts (a, b and c) in your response."
+      correct: 0,
+      explanation: "A position gives responsibility, but character determines how that responsibility is exercised. Peter commands leaders to be examples to the flock, not domineering over those in their charge (1 Peter 5:2–3)."
     },
     {
-      marks: 10,
-      min: 50,
-      text: "Integrity and Accountability — Suppose you publish incorrect information in a CDG group, and several members have already read it. You realise your mistake, but admitting it may embarrass you. What would you do, and why? Explain how your response would reflect Christian character.",
-      hint: "State your action, your reason, and the character it reflects."
-    },
-    {
-      marks: 10,
-      min: 50,
-      text: "Personal Leadership Evaluation — Reflect on your participation in the 21-Day Principled Leadership Course:",
-      parts: [
-        "a. What is the most important lesson you have learned?",
-        "b. Which area of your leadership character needs the most improvement?",
-        "c. What three practical steps will you take to become a more faithful, accountable, and Christ-centred leader?"
+      text: "Two administrators disagree about a decision. What should a principled leader do?",
+      options: [
+        "Support the administrator with the longest service",
+        "Allow the disagreement to continue until one person gives up",
+        "Make a decision based on personal friendship",
+        "Listen fairly to both sides and seek a truthful, peaceful resolution"
       ],
-      hint: "Answer all three parts (a, b and c) in your response."
+      correct: 3,
+      explanation: "A principled leader listens fairly to both sides and pursues truth and peace. \"The first to present his case seems right, till another comes forward and questions him\" (Proverbs 18:17); blessed are the peacemakers (Matthew 5:9)."
+    },
+    {
+      text: "What is the main purpose of accountability in Christian leadership?",
+      options: [
+        "To give leaders a reason to punish people who make mistakes",
+        "To help leaders remain responsible, transparent, and answerable for their actions",
+        "To ensure that leaders never make mistakes",
+        "To allow senior leaders to control every personal decision"
+      ],
+      correct: 1,
+      explanation: "Accountability helps leaders remain responsible, transparent and answerable for their actions. Each of us will give an account to God (Romans 14:12), and stewards must be found faithful (1 Corinthians 4:2)."
+    },
+    {
+      text: "A CDG administrator publishes incorrect biblical information in a group. Several members have already read it. What should the administrator do?",
+      options: [
+        "Delete the message quietly and hope nobody notices",
+        "Blame the person who supplied the information",
+        "Correct the information promptly, acknowledge the mistake, and clarify the truth",
+        "Leave the message because correcting it may cause embarrassment"
+      ],
+      correct: 2,
+      explanation: "The principled response is prompt correction with honest acknowledgement. We must put away falsehood and speak truth to our neighbours (Ephesians 4:25; Proverbs 28:13)."
+    },
+    {
+      text: "Which attitude best reflects servant leadership?",
+      options: [
+        "Being willing to serve others without making recognition the primary motivation",
+        "Performing only the duties that attract attention",
+        "Expecting others to handle unpleasant responsibilities",
+        "Using one's position to demand personal loyalty"
+      ],
+      correct: 0,
+      explanation: "Servant leadership serves others without making recognition the primary motivation. \"Do nothing out of selfish ambition... in humility value others above yourselves\" (Philippians 2:3–5)."
+    },
+    {
+      text: "What should guide a Christian leader when making a difficult decision?",
+      options: [
+        "The option that protects the leader's popularity",
+        "The preference of the most influential group member",
+        "The decision that avoids every form of criticism",
+        "Biblical principles, truth, wisdom, and love"
+      ],
+      correct: 3,
+      explanation: "Difficult decisions must be guided by biblical principles, truth, wisdom and love. God's Word is a lamp to our feet (Psalm 119:105), and we should ask God for wisdom (James 1:5)."
+    },
+    {
+      text: "A leader feels discouraged because their service is rarely appreciated. Which response best reflects Galatians 6:9?",
+      options: [
+        "Stop serving until people begin to show appreciation",
+        "Continue doing good faithfully without allowing discouragement to determine one's commitment",
+        "Compare personal contributions with those of other leaders",
+        "Reduce responsibilities without communicating with the team"
+      ],
+      correct: 1,
+      explanation: "Galatians 6:9 says, \"Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.\" Faithful perseverance pleases God."
+    },
+    {
+      text: "What is the most reliable way for a leader to build trust within a team?",
+      options: [
+        "Make promises that inspire confidence, even when fulfilment is uncertain",
+        "Avoid difficult conversations with team members",
+        "Demonstrate honesty, consistency, fairness, and dependability",
+        "Remind members frequently of the leader's authority"
+      ],
+      correct: 2,
+      explanation: "Trust is built by honesty, consistency, fairness and dependability — not by promises or authority. \"The righteous lead blameless lives\" (Proverbs 20:7; Luke 16:10)."
+    },
+    {
+      text: "An administrator notices that a fellow administrator is becoming overwhelmed by responsibilities. What would best demonstrate Christian leadership?",
+      options: [
+        "Offer appropriate support, communicate respectfully, and help find a practical solution",
+        "Take over all the person's responsibilities without discussion",
+        "Criticise the administrator for being unable to cope",
+        "Ignore the situation because everyone is responsible for themselves"
+      ],
+      correct: 0,
+      explanation: "Christian leadership responds with support, respectful communication and a practical solution. \"Carry each other's burdens, and in this way you will fulfil the law of Christ\" (Galatians 6:2)."
+    },
+    {
+      text: "Why is leading by example important in Christian leadership?",
+      options: [
+        "It removes the need to communicate expectations",
+        "It ensures that every follower will agree with the leader",
+        "It makes a leader's personal weaknesses irrelevant",
+        "It allows followers to see the values and principles the leader teaches in practice"
+      ],
+      correct: 3,
+      explanation: "Leading by example shows followers the values and principles the leader teaches in practice. Paul wrote, \"Follow my example, as I follow the example of Christ\" (1 Corinthians 11:1; 1 Peter 5:3)."
+    },
+    {
+      text: "Which action best demonstrates faithfulness in everyday administrative duties?",
+      options: [
+        "Completing tasks only when a senior administrator gives reminders",
+        "Performing assigned duties consistently and communicating when challenges arise",
+        "Choosing only the duties that match one's interests",
+        "Waiting for recognition before accepting new responsibilities"
+      ],
+      correct: 1,
+      explanation: "Faithfulness means performing assigned duties consistently and communicating openly when challenges arise. \"Whatever you do, work at it with all your heart, as working for the Lord\" (Colossians 3:23; Luke 16:10)."
+    },
+    {
+      text: "A leader must correct a team member who has made a serious mistake. Which approach is most appropriate?",
+      options: [
+        "Correct the person publicly to establish authority",
+        "Avoid correction to prevent hurting the person's feelings",
+        "Address the issue truthfully and respectfully, seeking correction and growth",
+        "Use the mistake as evidence that the person is unsuitable for leadership"
+      ],
+      correct: 2,
+      explanation: "Correction should be truthful and respectful and should aim at restoration and growth. \"Brothers and sisters, if someone is caught in a sin, you who live by the Spirit should restore that person gently\" (Galatians 6:1; Ephesians 4:15)."
+    },
+    {
+      text: "What is the relationship between humility and effective leadership?",
+      options: [
+        "Humility enables leaders to recognise their limitations, receive counsel, and serve others",
+        "Humility requires leaders to avoid making decisions",
+        "Humility means accepting every opinion without evaluation",
+        "Humility prevents leaders from correcting wrongdoing"
+      ],
+      correct: 0,
+      explanation: "Humility helps leaders recognise their limitations, receive counsel and serve others. \"With humility comes wisdom\" (Proverbs 11:2), and God gives grace to the humble (James 4:6)."
+    },
+    {
+      text: "A leader discovers that a trusted administrator has shared confidential information without permission. What should guide the leader's response?",
+      options: [
+        "Ignore the breach because the administrator is trusted",
+        "Share the information with more people to warn the team",
+        "Remove the administrator immediately without establishing the facts",
+        "Establish the facts, address the breach appropriately, and protect confidentiality"
+      ],
+      correct: 3,
+      explanation: "A principled response establishes the facts, addresses the breach appropriately and protects confidentiality. Scripture warns against spreading secrets (Proverbs 25:9) and calls for careful, fair handling of matters (Matthew 18:15–16)."
+    },
+    {
+      text: "According to Proverbs 11:3, how does integrity help guide a leader?",
+      options: [
+        "It guarantees that every decision will be popular",
+        "It helps direct the leader toward honest and upright choices",
+        "It removes the need for wisdom or counsel",
+        "It ensures that a leader will never face opposition"
+      ],
+      correct: 1,
+      explanation: "Proverbs 11:3 says, \"The integrity of the upright guides them.\" Integrity directs a leader toward honest, upright choices — it does not guarantee popularity or remove opposition."
+    },
+    {
+      text: "What should a leader do when personal interests conflict with the responsibilities of the team?",
+      options: [
+        "Choose personal interests because personal well-being comes first in every situation",
+        "Hide the conflict to avoid questions",
+        "Act transparently, consider the team's legitimate interests, and follow agreed principles",
+        "Use authority to make others accept the leader's preference"
+      ],
+      correct: 2,
+      explanation: "A principled leader acts transparently, considers the team's legitimate interests and follows agreed principles. \"Let each of you look not only to his own interests, but also to the interests of others\" (Philippians 2:4; Romans 12:3)."
+    },
+    {
+      text: "Which statement best describes the relationship between spiritual growth and leadership development?",
+      options: [
+        "A leader should continually grow in Christlike character, wisdom, and practical responsibility",
+        "Spiritual growth becomes unnecessary once someone is appointed an administrator",
+        "Leadership development depends mainly on gaining more followers",
+        "A leader's experience removes the need for continued learning"
+      ],
+      correct: 0,
+      explanation: "Leaders must keep growing in Christlike character, wisdom and practical responsibility. \"Grow in the grace and knowledge of our Lord and Saviour Jesus Christ\" (2 Peter 3:18; 1 Timothy 4:15)."
+    },
+    {
+      text: "What should be the central motivation for serving as an administrator in Christian Daily Guide?",
+      options: [
+        "Becoming more influential than other administrators",
+        "Receiving recognition for spiritual commitment",
+        "Securing a higher leadership position",
+        "Loving God and people while faithfully serving Christ and the purpose of the ministry"
+      ],
+      correct: 3,
+      explanation: "The central motivation is love for God and people, expressed in faithful service to Christ and the ministry. \"Whatever you do, work at it with all your heart, as working for the Lord\" (Colossians 3:23–24; Matthew 22:37–39)."
     }
   ];
 
-  /* =========================================================
-     FINAL DECLARATION (required, not marked)
-     ========================================================= */
-  var DECLARATION = {
-    marks: 0,
-    min: 20,
-    text: "Complete the statement below in your own words:",
-    parts: ["\"As a Christian Daily Guide administrator, I commit myself to...\""],
-    hint: "Write your personal commitment in one or two sentences."
-  };
+  var TOTAL = QUESTIONS.length;        // 25
+  var MARKS_PER_Q = 4;                 // 4 marks each
+  var MAX_SCORE = TOTAL * MARKS_PER_Q; // 100
+  var PASS_MARK = 70;                  // 70 out of 100
 
   /* =========================================================
      STATE
      ========================================================= */
-  var TOTAL_ITEMS = 10 + SECTION_B.length + SECTION_C.length + SECTION_D.length + 1; // 23
-  var WRITTEN_TOTAL = SECTION_B.length + SECTION_C.length + SECTION_D.length + 1;     // 13
-
   var state = {
+    answers: [],   // 25 entries: null or option index
     name: '',
     group: '',
-    pid: '',
-    answers: [],       // Section A, 10 entries (null or option index)
-    startedAt: null,
-    submittedAt: null,
-    sectionACorrect: 0
+    pid: ''
   };
 
   var els = {};
@@ -1145,30 +1057,9 @@
 
   function letter(i) { return String.fromCharCode(65 + i); }
 
-  function countWords(str) {
-    var t = String(str || '').replace(/\s+/g, ' ').trim();
-    if (!t) { return 0; }
-    return t.split(' ').length;
-  }
-
-  function getList(prefix) {
-    if (prefix === 'b') { return SECTION_B; }
-    if (prefix === 'c') { return SECTION_C; }
-    if (prefix === 'd') { return SECTION_D; }
-    return [DECLARATION];
-  }
-
-  function parseTaId(id) {
-    var parts = String(id).split('-');
-    if (parts.length !== 3 || parts[0] !== 'ta') { return null; }
-    var idx = parseInt(parts[2], 10);
-    if (isNaN(idx)) { return null; }
-    return { prefix: parts[1], idx: idx };
-  }
-
   function resetAnswers() {
     state.answers = [];
-    for (var i = 0; i < SECTION_A.length; i++) { state.answers.push(null); }
+    for (var i = 0; i < TOTAL; i++) { state.answers.push(null); }
   }
 
   /* =========================================================
@@ -1186,70 +1077,58 @@
     els.nameError = document.getElementById('nameError');
 
     els.assessWho = document.getElementById('assessWho');
-    els.form = document.getElementById('assessmentForm');
+    els.quizForm = document.getElementById('quizForm');
+    els.questionsContainer = document.getElementById('questionsContainer');
     els.progressCount = document.getElementById('progressCount');
-    els.progressSub = document.getElementById('progressSub');
     els.progressBar = document.getElementById('progressBar');
     els.barFill = document.getElementById('barFill');
     els.submitError = document.getElementById('submitError');
 
     els.statusBanner = document.getElementById('statusBanner');
     els.statusTitle = document.getElementById('statusTitle');
-    els.statusNote = document.getElementById('statusNote');
     els.rName = document.getElementById('rName');
     els.rGroupWrap = document.getElementById('rGroupWrap');
     els.rGroup = document.getElementById('rGroup');
     els.rIdWrap = document.getElementById('rIdWrap');
     els.rId = document.getElementById('rId');
     els.rDate = document.getElementById('rDate');
-    els.rTime = document.getElementById('rTime');
-    els.rSectionA = document.getElementById('rSectionA');
-    els.rWritten = document.getElementById('rWritten');
-    els.rPending = document.getElementById('rPending');
+    els.rScore = document.getElementById('rScore');
+    els.rPercent = document.getElementById('rPercent');
+    els.rCorrect = document.getElementById('rCorrect');
     els.rMessage = document.getElementById('rMessage');
+    els.rEquiv = document.getElementById('rEquiv');
 
     els.reviewContainer = document.getElementById('reviewContainer');
-    els.submissionContainer = document.getElementById('submissionContainer');
     els.includeReview = document.getElementById('includeReview');
-    els.includeWritten = document.getElementById('includeWritten');
     els.printBtn = document.getElementById('printBtn');
     els.restartBtn1 = document.getElementById('restartBtn1');
     els.restartBtn2 = document.getElementById('restartBtn2');
 
     resetAnswers();
-    renderAll();
+    renderQuestions();
     bindEvents();
     updateProgress();
   }
 
   /* =========================================================
-     RENDERING
+     RENDER QUESTIONS
      ========================================================= */
-  function renderAll() {
-    renderSectionA();
-    renderWritten('b', 'sectionBList');
-    renderWritten('c', 'sectionCList');
-    renderWritten('d', 'sectionDList');
-    renderWritten('e', 'sectionEList');
-  }
-
-  function renderSectionA() {
+  function renderQuestions() {
     var html = '';
 
-    for (var i = 0; i < SECTION_A.length; i++) {
-      var q = SECTION_A[i];
-      html += '<div class="q-card" id="qa-' + i + '" role="group" aria-labelledby="qa-label-' + i + '">';
-      html += '<p class="q-legend" id="qa-label-' + i + '">';
-      html += '<span class="q-num">Question ' + (i + 1) + ' of ' + SECTION_A.length +
-              '<span class="marks-tag">2 marks</span></span>';
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      var q = QUESTIONS[i];
+      html += '<div class="q-card" id="q-' + i + '" role="group" aria-labelledby="qlabel-' + i + '">';
+      html += '<p class="q-legend" id="qlabel-' + i + '">';
+      html += '<span class="q-num">Question ' + (i + 1) + ' of ' + TOTAL + '</span>';
       html += '<span class="q-text">' + esc(q.text) + '</span>';
       html += '</p>';
       html += '<div class="options">';
 
       for (var j = 0; j < q.options.length; j++) {
-        var inputId = 'qa' + i + '_o' + j;
+        var inputId = 'q' + i + '_o' + j;
         html += '<label class="option" for="' + inputId + '">';
-        html += '<input type="radio" id="' + inputId + '" name="sa' + i + '" value="' + j + '">';
+        html += '<input type="radio" id="' + inputId + '" name="q' + i + '" value="' + j + '">';
         html += '<span class="option-letter" aria-hidden="true">' + letter(j) + '</span>';
         html += '<span class="option-text">' + esc(q.options[j]) + '</span>';
         html += '</label>';
@@ -1258,49 +1137,7 @@
       html += '</div></div>';
     }
 
-    document.getElementById('sectionAList').innerHTML = html;
-  }
-
-  function renderWritten(prefix, containerId) {
-    var list = getList(prefix);
-    var html = '';
-
-    for (var i = 0; i < list.length; i++) {
-      var q = list[i];
-
-      html += '<div class="q-block" id="qb-' + prefix + '-' + i + '">';
-
-      html += '<p class="q-num" id="qb-label-' + prefix + '-' + i + '">Question ' + (i + 1) +
-              (q.marks ? '<span class="marks-tag">' + q.marks + ' marks</span>' : '') + '</p>';
-
-      if (q.ref) {
-        html += '<p class="scripture-ref">' + esc(q.ref) + '</p>';
-      }
-
-      html += '<p class="qb-text">' + esc(q.text) + '</p>';
-
-      if (q.parts && q.parts.length) {
-        html += '<ul class="parts">';
-        for (var p = 0; p < q.parts.length; p++) {
-          html += '<li>' + esc(q.parts[p]) + '</li>';
-        }
-        html += '</ul>';
-      }
-
-      if (q.hint) {
-        html += '<p class="hint">' + esc(q.hint) + '</p>';
-      }
-
-      html += '<label class="flabel" for="ta-' + prefix + '-' + i + '">Your answer</label>';
-      html += '<textarea id="ta-' + prefix + '-' + i + '" name="ta-' + prefix + '-' + i + '" ' +
-              'rows="5" aria-describedby="wc-' + prefix + '-' + i + '" ' +
-              'placeholder="Type your answer here..."></textarea>';
-      html += '<p class="wc" id="wc-' + prefix + '-' + i + '">0 words &middot; minimum ' + q.min + '</p>';
-
-      html += '</div>';
-    }
-
-    document.getElementById(containerId).innerHTML = html;
+    els.questionsContainer.innerHTML = html;
   }
 
   function syncOptionStyles() {
@@ -1328,63 +1165,43 @@
       els.nameError.textContent = '';
     });
 
-    els.form.addEventListener('change', function (e) {
+    els.quizForm.addEventListener('change', function (e) {
       var t = e.target;
-      if (t && t.type === 'radio' && t.name && t.name.indexOf('sa') === 0) {
-        var idx = parseInt(t.name.slice(2), 10);
-        if (!isNaN(idx) && idx >= 0 && idx < SECTION_A.length) {
-          state.answers[idx] = parseInt(t.value, 10);
-          var card = document.getElementById('qa-' + idx);
-          if (card) { card.classList.remove('unanswered'); }
-        }
-        syncOptionStyles();
-        updateProgress();
-      }
+      if (!t || t.type !== 'radio') { return; }
+      var name = t.name || '';
+      if (name.charAt(0) !== 'q') { return; }
+
+      var idx = parseInt(name.slice(1), 10);
+      if (isNaN(idx) || idx < 0 || idx >= TOTAL) { return; }
+
+      state.answers[idx] = parseInt(t.value, 10);
+
+      var card = document.getElementById('q-' + idx);
+      if (card) { card.classList.remove('unanswered'); }
+
+      syncOptionStyles();
+      updateProgress();
     });
 
-    els.form.addEventListener('input', function (e) {
-      var t = e.target;
-      if (t && t.tagName === 'TEXTAREA') {
-        var info = parseTaId(t.id);
-        if (!info) { return; }
-        var list = getList(info.prefix);
-        var q = list[info.idx];
-        if (!q) { return; }
-
-        var n = countWords(t.value);
-        var wc = document.getElementById('wc-' + info.prefix + '-' + info.idx);
-        if (wc) {
-          wc.textContent = n + ' word' + (n === 1 ? '' : 's') + ' \u00B7 minimum ' + q.min;
-          wc.classList.remove('ok', 'low');
-          if (n >= q.min) { wc.classList.add('ok'); }
-          else if (n > 0) { wc.classList.add('low'); }
-        }
-
-        t.classList.remove('invalid');
-        var block = document.getElementById('qb-' + info.prefix + '-' + info.idx);
-        if (block) { block.classList.remove('unanswered'); }
-
-        updateProgress();
-      }
-    });
-
-    els.form.addEventListener('submit', handleSubmit);
+    els.quizForm.addEventListener('submit', handleSubmit);
 
     els.restartBtn1.addEventListener('click', confirmRestart);
     els.restartBtn2.addEventListener('click', confirmRestart);
 
     els.printBtn.addEventListener('click', function () {
-      syncPrintClasses();
+      if (els.includeReview.checked) {
+        document.body.classList.add('print-review');
+      } else {
+        document.body.classList.remove('print-review');
+      }
       window.print();
     });
 
-    els.includeReview.addEventListener('change', syncPrintClasses);
-    els.includeWritten.addEventListener('change', syncPrintClasses);
-  }
-
-  function syncPrintClasses() {
-    document.body.classList.toggle('print-review', els.includeReview.checked);
-    document.body.classList.toggle('print-written', els.includeWritten.checked);
+    els.includeReview.addEventListener('change', function () {
+      if (!els.includeReview.checked) {
+        document.body.classList.remove('print-review');
+      }
+    });
   }
 
   /* =========================================================
@@ -1413,7 +1230,6 @@
     state.name = name;
     state.group = els.groupNumber.value.replace(/\s+/g, ' ').trim();
     state.pid = els.participantId.value.replace(/\s+/g, ' ').trim();
-    state.startedAt = new Date();
 
     var who = 'Participant: <strong>' + esc(state.name) + '</strong>';
     if (state.group) { who += ' &middot; Group: <strong>' + esc(state.group) + '</strong>'; }
@@ -1428,7 +1244,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     setTimeout(function () {
-      var first = document.querySelector('#qa-0 input[type="radio"]');
+      var first = document.querySelector('#q-0 input[type="radio"]');
       if (first) { first.focus(); }
     }, 350);
   }
@@ -1444,120 +1260,57 @@
      PROGRESS
      ========================================================= */
   function updateProgress() {
-    var aDone = 0;
+    var answered = 0;
     for (var i = 0; i < state.answers.length; i++) {
-      if (state.answers[i] !== null) { aDone++; }
+      if (state.answers[i] !== null) { answered++; }
     }
 
-    var wDone = 0;
-    var wTotal = 0;
-    var prefixes = ['b', 'c', 'd', 'e'];
+    els.progressCount.textContent = answered + '/' + TOTAL + ' answered';
 
-    for (var p = 0; p < prefixes.length; p++) {
-      var list = getList(prefixes[p]);
-      for (var k = 0; k < list.length; k++) {
-        wTotal++;
-        var ta = document.getElementById('ta-' + prefixes[p] + '-' + k);
-        if (ta && countWords(ta.value) >= list[k].min) { wDone++; }
-      }
-    }
-
-    var done = aDone + wDone;
-    var pct = Math.round((done / TOTAL_ITEMS) * 100);
-
-    els.progressCount.textContent = done + '/' + TOTAL_ITEMS + ' items complete';
-    els.progressSub.textContent = 'Section A: ' + aDone + '/' + SECTION_A.length +
-                                 ' answered \u00B7 Written answers: ' + wDone + '/' + wTotal;
+    var pct = Math.round((answered / TOTAL) * 100);
     els.barFill.style.width = pct + '%';
-    els.progressBar.setAttribute('aria-valuenow', String(done));
+    els.progressBar.setAttribute('aria-valuenow', String(answered));
   }
 
   /* =========================================================
-     VALIDATION
+     SUBMIT
      ========================================================= */
-  function collectProblems() {
-    var problems = [];
-
-    // Section A
-    for (var i = 0; i < SECTION_A.length; i++) {
-      if (state.answers[i] === null) {
-        problems.push({
-          msg: 'Section A, Question ' + (i + 1) + ' is unanswered.',
-          target: 'qa-' + i,
-          input: 'qa' + i + '_o0'
-        });
-      }
-    }
-
-    // Written sections
-    var prefixes = ['b', 'c', 'd', 'e'];
-    var sectionNames = { b: 'Section B', c: 'Section C', d: 'Section D', e: 'Final Declaration' };
-
-    for (var p = 0; p < prefixes.length; p++) {
-      var prefix = prefixes[p];
-      var list = getList(prefix);
-
-      for (var k = 0; k < list.length; k++) {
-        var ta = document.getElementById('ta-' + prefix + '-' + k);
-        var n = ta ? countWords(ta.value) : 0;
-        if (n < list[k].min) {
-          var label = sectionNames[prefix];
-          var qLabel = (prefix === 'e') ? '' : ', Question ' + (k + 1);
-          problems.push({
-            msg: label + qLabel + ' needs at least ' + list[k].min + ' words (currently ' + n + ').',
-            target: 'qb-' + prefix + '-' + k,
-            input: 'ta-' + prefix + '-' + k
-          });
-        }
-      }
-    }
-
-    return problems;
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
 
-    var problems = collectProblems();
+    var missing = [];
+    for (var i = 0; i < state.answers.length; i++) {
+      if (state.answers[i] === null) { missing.push(i); }
+    }
 
-    if (problems.length > 0) {
-      // Clear previous highlights
-      var cards = els.form.querySelectorAll('.q-card, .q-block');
-      for (var c = 0; c < cards.length; c++) { cards[c].classList.remove('unanswered'); }
-
-      var shown = Math.min(problems.length, 6);
-      var html = '<strong>Please complete all items before submitting.</strong><ul>';
-      for (var i = 0; i < shown; i++) {
-        html += '<li>' + esc(problems[i].msg) + '</li>';
-      }
-      if (problems.length > shown) {
-        html += '<li>&hellip;and ' + (problems.length - shown) + ' more item(s).</li>';
-      }
-      html += '</ul>';
-
-      els.submitError.innerHTML = html;
+    if (missing.length > 0) {
       els.submitError.hidden = false;
+      els.submitError.textContent =
+        'Please answer all ' + TOTAL + ' questions before submitting. You still have ' +
+        missing.length + ' unanswered question' + (missing.length > 1 ? 's' : '') +
+        ' (highlighted below).';
 
-      for (var m = 0; m < problems.length; m++) {
-        var block = document.getElementById(problems[m].target);
-        if (block) { block.classList.add('unanswered'); }
-        var input = document.getElementById(problems[m].input);
-        if (input) { input.classList.add('invalid'); }
+      var cards = document.querySelectorAll('.q-card');
+      for (var c = 0; c < cards.length; c++) {
+        cards[c].classList.remove('unanswered');
+      }
+      for (var m = 0; m < missing.length; m++) {
+        var card = document.getElementById('q-' + missing[m]);
+        if (card) { card.classList.add('unanswered'); }
       }
 
-      var firstBlock = document.getElementById(problems[0].target);
-      if (firstBlock) { firstBlock.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      var first = document.getElementById('q-' + missing[0]);
+      if (first) { first.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       return;
     }
 
     els.submitError.hidden = true;
-    els.submitError.innerHTML = '';
+    els.submitError.textContent = '';
 
     var ok = window.confirm(
       'Submit your assessment now?\n\n' +
-      'All ' + TOTAL_ITEMS + ' items have been completed. ' +
-      'Section A will be marked immediately and your written answers will be prepared for review.\n\n' +
-      'You cannot change your answers after submission.'
+      'You have answered all ' + TOTAL + ' questions. ' +
+      'Your answers will be marked immediately and cannot be changed after submission.'
     );
     if (!ok) { return; }
 
@@ -1565,44 +1318,27 @@
   }
 
   /* =========================================================
-     FINISH
+     MARKING + RESULTS
      ========================================================= */
   function finishAssessment() {
-    state.submittedAt = new Date();
+    var correctCount = 0;
 
-    var correct = 0;
-    for (var i = 0; i < SECTION_A.length; i++) {
-      if (state.answers[i] === SECTION_A[i].correct) { correct++; }
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (state.answers[i] === QUESTIONS[i].correct) {
+        correctCount++;
+      }
     }
-    state.sectionACorrect = correct;
 
-    renderResults(correct);
-    renderReview();
-    renderSubmission();
+    var score = correctCount * MARKS_PER_Q;              // out of 100
+    var percent = Math.round((correctCount / TOTAL) * 100);
+    var passed = score >= PASS_MARK;                     // 70 out of 100
 
-    document.body.classList.remove('print-review', 'print-written');
-    els.includeReview.checked = true;
-    els.includeWritten.checked = true;
-    syncPrintClasses();
+    /* ---- Status banner ---- */
+    els.statusBanner.className = 'status-banner ' + (passed ? 'pass' : 'fail');
+    els.statusTitle.textContent = passed ? 'ASSESSMENT PASSED' : 'ASSESSMENT NOT PASSED';
 
-    els.assessment.classList.add('hidden');
-    els.welcome.classList.add('hidden');
-    els.results.classList.remove('hidden');
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function renderResults(correct) {
-    var sectionAScore = correct * 2; // out of 20
-
-    // Status banner
-    els.statusBanner.className = 'status-banner pass';
-    els.statusTitle.textContent = 'SUBMISSION COMPLETE';
-    els.statusNote.textContent =
-      'All ' + TOTAL_ITEMS + ' items answered \u00B7 Section A marked automatically';
-
-    // Details
-    els.rName.textContent = state.name || '\u2014';
+    /* ---- Participant details ---- */
+    els.rName.textContent = state.name || '—';
 
     if (state.group) {
       els.rGroup.textContent = state.group;
@@ -1618,48 +1354,61 @@
       els.rIdWrap.style.display = 'none';
     }
 
-    var now = state.submittedAt;
+    /* ---- Date ---- */
+    var now = new Date();
     els.rDate.textContent = now.toLocaleDateString(undefined, {
       year: 'numeric', month: 'long', day: 'numeric'
     }) + ' at ' + now.toLocaleTimeString(undefined, {
       hour: '2-digit', minute: '2-digit'
     });
 
-    var minutes = 0;
-    if (state.startedAt) {
-      minutes = Math.max(1, Math.round((now.getTime() - state.startedAt.getTime()) / 60000));
-    }
-    els.rTime.textContent = minutes + ' minute' + (minutes === 1 ? '' : 's');
+    /* ---- Scores ---- */
+    els.rScore.textContent = score + '/' + MAX_SCORE;
+    els.rPercent.textContent = percent + '%';
+    els.rCorrect.textContent = correctCount + '/' + TOTAL;
 
-    // Score boxes
-    els.rSectionA.textContent = sectionAScore + '/20';
-    els.rWritten.textContent = WRITTEN_TOTAL + '/' + WRITTEN_TOTAL;
+    var minCorrect = Math.ceil(PASS_MARK / MARKS_PER_Q); // 18 correct
+    var minMarks = minCorrect * MARKS_PER_Q;             // 72 marks
 
-    // Message
-    var msg = 'Thank you for completing the Final Assessment for the 21-Day Principled Leadership Course, Batch 2. ';
+    els.rEquiv.textContent =
+      'Pass mark: ' + PASS_MARK + ' out of ' + MAX_SCORE +
+      ' — at least ' + minCorrect + ' correct answers (' + minMarks + ' marks) required.';
 
-    if (sectionAScore >= 16) {
-      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A — a strong result on the multiple-choice questions. ';
-    } else if (sectionAScore >= 12) {
-      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A. Review the questions you missed and keep growing. ';
+    /* ---- Message ---- */
+    if (passed) {
+      els.rMessage.textContent =
+        'Congratulations! You have met the assessment pass mark for the Christian Daily Guide ' +
+        'Principled Leadership Course. Continue growing in Christlike character, integrity, ' +
+        'humility, and faithful service.';
     } else {
-      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A. Take time to review the answer feedback below and revisit the course material. ';
+      els.rMessage.textContent =
+        'Thank you for participating. Review the principles of godly leadership, learn from your ' +
+        'mistakes, and continue growing. Your journey in leadership development continues.';
     }
 
-    msg += 'Your written answers in Sections B, C and D (80 marks) will be reviewed and marked by the CDG administrator. ' +
-           'Print or save this submission and send it to the administrator so that your final total can be completed.';
+    /* ---- Review ---- */
+    renderReview();
 
-    els.rMessage.textContent = msg;
+    /* ---- Reset print state ---- */
+    document.body.classList.remove('print-review');
+    els.includeReview.checked = true;
+
+    /* ---- Swap screens ---- */
+    els.assessment.classList.add('hidden');
+    els.welcome.classList.add('hidden');
+    els.results.classList.remove('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   /* =========================================================
-     REVIEW (SECTION A)
+     ANSWER REVIEW
      ========================================================= */
   function renderReview() {
     var html = '';
 
-    for (var i = 0; i < SECTION_A.length; i++) {
-      var q = SECTION_A[i];
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      var q = QUESTIONS[i];
       var selected = state.answers[i];
       var isCorrect = (selected === q.correct);
 
@@ -1674,7 +1423,7 @@
       html += '<div class="review-top">';
       html += '<span class="review-q">Question ' + (i + 1) + '</span>';
       html += '<span class="badge ' + (isCorrect ? 'badge-correct' : 'badge-incorrect') + '">' +
-              (isCorrect ? 'Correct \u00B7 +2' : 'Incorrect \u00B7 0') + '</span>';
+              (isCorrect ? 'Correct &middot; +4' : 'Incorrect &middot; 0') + '</span>';
       html += '</div>';
 
       html += '<p class="review-text">' + esc(q.text) + '</p>';
@@ -1695,55 +1444,12 @@
   }
 
   /* =========================================================
-     SUBMISSION (WRITTEN ANSWERS)
-     ========================================================= */
-  function renderSubmission() {
-    var html = '';
-    var prefixes = ['b', 'c', 'd', 'e'];
-    var names = { b: 'Section B', c: 'Section C', d: 'Section D', e: 'Final Declaration' };
-
-    for (var p = 0; p < prefixes.length; p++) {
-      var prefix = prefixes[p];
-      var list = getList(prefix);
-
-      for (var i = 0; i < list.length; i++) {
-        var q = list[i];
-        var ta = document.getElementById('ta-' + prefix + '-' + i);
-        var answer = ta ? ta.value.replace(/\r\n/g, '\n').trim() : '';
-        var words = countWords(answer);
-
-        var heading = names[prefix];
-        if (prefix !== 'e') { heading += ' \u2014 Question ' + (i + 1); }
-        if (q.marks) { heading += ' \u00B7 ' + q.marks + ' marks'; }
-
-        html += '<div class="sub-item">';
-        html += '<p class="sub-head">' + esc(heading) + '</p>';
-        html += '<p class="sub-q">' + esc(q.text) + '</p>';
-        if (q.parts && q.parts.length) {
-          html += '<ul class="parts" style="margin:0 0 8px;font-size:13px;">';
-          for (var s = 0; s < q.parts.length; s++) {
-            html += '<li>' + esc(q.parts[s]) + '</li>';
-          }
-          html += '</ul>';
-        }
-        html += '<p class="sub-a">' + esc(answer || '(No answer provided)') + '</p>';
-        html += '<p class="wc" style="margin-top:6px;">' + words +
-                ' word' + (words === 1 ? '' : 's') + '</p>';
-        html += '</div>';
-      }
-    }
-
-    els.submissionContainer.innerHTML = html;
-  }
-
-  /* =========================================================
      RESTART
      ========================================================= */
   function confirmRestart() {
     var ok = window.confirm(
       'Restart the assessment?\n\n' +
-      'All your current answers, your Section A result and your written responses will be cleared. ' +
-      'This cannot be undone.'
+      'All your current answers and your result will be cleared. This cannot be undone.'
     );
     if (!ok) { return; }
     resetAll();
@@ -1754,53 +1460,34 @@
     state.name = '';
     state.group = '';
     state.pid = '';
-    state.startedAt = null;
-    state.submittedAt = null;
-    state.sectionACorrect = 0;
 
-    // Clear radio inputs
-    var radios = els.form.querySelectorAll('input[type="radio"]');
-    for (var i = 0; i < radios.length; i++) { radios[i].checked = false; }
+    /* Clear radio inputs */
+    var inputs = els.quizForm.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < inputs.length; i++) { inputs[i].checked = false; }
     syncOptionStyles();
 
-    // Clear textareas + word counters
-    var textareas = els.form.querySelectorAll('textarea');
-    for (var t = 0; t < textareas.length; t++) {
-      textareas[t].value = '';
-      textareas[t].classList.remove('invalid');
-      var info = parseTaId(textareas[t].id);
-      if (info) {
-        var wc = document.getElementById('wc-' + info.prefix + '-' + info.idx);
-        var q = getList(info.prefix)[info.idx];
-        if (wc && q) {
-          wc.textContent = '0 words \u00B7 minimum ' + q.min;
-          wc.classList.remove('ok', 'low');
-        }
-      }
+    /* Clear highlight classes */
+    var cards = els.questionsContainer.querySelectorAll('.q-card');
+    for (var c = 0; c < cards.length; c++) {
+      cards[c].classList.remove('unanswered');
     }
 
-    // Clear highlight classes
-    var blocks = els.form.querySelectorAll('.q-card, .q-block');
-    for (var b = 0; b < blocks.length; b++) { blocks[b].classList.remove('unanswered'); }
-
-    // Clear errors
+    /* Clear errors */
     els.submitError.hidden = true;
-    els.submitError.innerHTML = '';
+    els.submitError.textContent = '';
     els.nameError.hidden = true;
     els.nameError.textContent = '';
     els.fullName.classList.remove('invalid');
 
-    // Clear results content
+    /* Clear review + registration */
     els.reviewContainer.innerHTML = '';
-    els.submissionContainer.innerHTML = '';
     els.regForm.reset();
 
-    // Reset print state
-    document.body.classList.remove('print-review', 'print-written');
+    /* Reset print state */
+    document.body.classList.remove('print-review');
     els.includeReview.checked = true;
-    els.includeWritten.checked = true;
 
-    // Swap screens
+    /* Swap screens */
     els.results.classList.add('hidden');
     els.assessment.classList.add('hidden');
     els.welcome.classList.remove('hidden');
