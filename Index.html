@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Christian Daily Guide — Principled Leadership Assessment Portal, Batch 2. 21-Day Principled Leadership Course, Final Assessment.">
+<title>CDG Principled Leadership Assessment Portal — Batch 2</title>
+<style>
+  /* ================= BASE ================= */
+  :root{
+    --navy:#0b2545;
+    --navy-2:#13315c;
+    --navy-3:#1d4e89;
+    --ink:#12212f;
+    --muted:#5b6b7c;
+    --line:#dde3ea;
+    --bg:#f4f6f9;
+    --white:#ffffff;
+    --green:#127a43;
+    --green-bg:#e7f5ec;
+    --green-line:#b7e0c6;
+    --red:#b3261e;
+    --red-bg:#fdecea;
+    --red-line:#f3c3bf;
+    --amber:#8a6100;
+    --amber-bg:#fff6e0;
+    --amber-line:#f0d79a;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(11,37,69,.06), 0 8px 24px rgba(11,37,69,.07);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ width:100%; max-width:940px; margin:0 auto; padding:0 16px; }
+  .hidden{ display:none !important; }
+  .print-only{ display:none; }
+
+  h1,h2,h3{ color:var(--navy); line-height:1.25; margin:0 0 10px; }
+  h1{ font-size:24px; letter-spacing:-.2px; }
+  h2{ font-size:19px; }
+  h3{ font-size:16px; }
+  p{ margin:0 0 12px; }
+  .muted{ color:var(--muted); }
+  .small{ font-size:13px; }
+
+  /* ================= HEADER ================= */
+  .site-header{
+    background:linear-gradient(135deg,#0b2545 0%, #13315c 55%, #1d4e89 100%);
+    color:#fff;
+    padding:16px 0;
+    box-shadow:0 2px 12px rgba(11,37,69,.20);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; flex-wrap:wrap;
+  }
+  .logo{ display:flex; align-items:center; gap:12px; min-width:0; }
+  .logo-mark{
+    flex:none; display:grid; place-items:center;
+    width:44px; height:44px; border-radius:12px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);
+    font-weight:800; font-size:14px; letter-spacing:.6px;
+  }
+  .logo-text{ display:flex; flex-direction:column; line-height:1.3; min-width:0; }
+  .logo-text strong{ font-size:15px; font-weight:700; }
+  .logo-text small{ font-size:11.5px; opacity:.82; letter-spacing:.2px; }
+  .batch-chip{
+    flex:none; background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.32);
+    padding:5px 13px; border-radius:999px;
+    font-size:12px; font-weight:700; letter-spacing:.5px;
+  }
+
+  /* ================= MAIN / CARD ================= */
+  main{ padding:22px 0 40px; }
+
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    margin-bottom:18px;
+  }
+
+  /* ================= WELCOME ================= */
+  .kicker{
+    display:inline-block; font-size:11.5px; font-weight:800;
+    letter-spacing:1px; text-transform:uppercase;
+    color:var(--navy-3); background:#eef4fb;
+    border:1px solid #d6e3f3;
+    padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  }
+  .lead{ font-size:15.5px; color:#2c3e50; }
+
+  .info-list{
+    list-style:none; margin:18px 0; padding:0;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px;
+  }
+  .info-list li{
+    background:#fbfcfe; border:1px solid var(--line);
+    border-radius:10px; padding:10px 13px;
+  }
+  .info-list span{
+    display:block; font-size:11px; font-weight:800;
+    letter-spacing:.7px; text-transform:uppercase;
+    color:var(--muted); margin-bottom:2px;
+  }
+  .info-list strong{ display:block; font-size:14px; color:var(--navy); font-weight:700; }
+
+  /* ================= FORM ================= */
+  .field{ margin-bottom:16px; }
+  .flabel{
+    display:block; font-size:13.5px; font-weight:700;
+    color:var(--navy); margin-bottom:6px;
+  }
+  .req{ color:var(--red); }
+
+  input[type="text"]{
+    width:100%; padding:12px 14px; font-size:16px;
+    font-family:inherit; color:var(--ink); background:#fff;
+    border:1px solid var(--line); border-radius:10px;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  input[type="text"]:focus{
+    outline:none; border-color:var(--navy-3);
+    box-shadow:0 0 0 3px rgba(29,78,137,.16);
+  }
+  input[type="text"].invalid{
+    border-color:var(--red);
+    box-shadow:0 0 0 3px rgba(179,38,30,.12);
+  }
+
+  textarea{
+    width:100%; min-height:130px; padding:12px 14px;
+    font-family:inherit; font-size:15px; line-height:1.6;
+    color:var(--ink); background:#fff;
+    border:1px solid var(--line); border-radius:10px;
+    resize:vertical; transition:border-color .15s, box-shadow .15s;
+  }
+  textarea:focus{
+    outline:none; border-color:var(--navy-3);
+    box-shadow:0 0 0 3px rgba(29,78,137,.16);
+  }
+  textarea.invalid{
+    border-color:var(--red);
+    box-shadow:0 0 0 3px rgba(179,38,30,.12);
+  }
+
+  .error{
+    color:var(--red); font-size:13px; font-weight:600;
+    margin:10px 0 0; background:var(--red-bg);
+    border:1px solid var(--red-line);
+    border-radius:8px; padding:10px 13px;
+  }
+  .error[hidden]{ display:none; }
+  .error ul{ margin:6px 0 0; padding-left:18px; }
+  .error li{ margin-bottom:3px; font-weight:600; }
+
+  /* ================= BUTTONS ================= */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    gap:8px; padding:13px 22px; border-radius:10px;
+    border:1px solid transparent; font-family:inherit;
+    font-size:15px; font-weight:700; cursor:pointer;
+    text-decoration:none; transition:background .15s, border-color .15s, transform .06s;
+    min-height:48px;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn:focus-visible{ outline:3px solid rgba(29,78,137,.35); outline-offset:2px; }
+  .btn-primary{ background:var(--navy-3); color:#fff; }
+  .btn-primary:hover{ background:var(--navy-2); }
+  .btn-ghost{ background:#fff; color:var(--navy); border-color:#c9d5e3; }
+  .btn-ghost:hover{ background:#f2f6fb; }
+  .btn-block{ width:100%; }
+
+  .btn-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+  .btn-row .btn{ flex:1 1 210px; }
+
+  /* ================= NOTICE ================= */
+  .notice{
+    margin-top:20px; background:var(--amber-bg);
+    border:1px solid var(--amber-line); border-radius:12px;
+    padding:14px 16px; color:#5c4300;
+  }
+  .notice h3{
+    color:var(--amber); font-size:13px; text-transform:uppercase;
+    letter-spacing:.7px; margin:0 0 8px;
+  }
+  .notice ul{ margin:0; padding-left:18px; font-size:13.5px; }
+  .notice li{ margin-bottom:5px; }
+  .notice li:last-child{ margin-bottom:0; }
+
+  /* ================= ASSESSMENT HEAD ================= */
+  .assess-head{
+    display:flex; align-items:flex-start; justify-content:space-between;
+    gap:14px; flex-wrap:wrap;
+  }
+  .assess-who{
+    font-size:13.5px; color:var(--muted); font-weight:600; margin:0;
+  }
+  .assess-who strong{ color:var(--navy); }
+
+  .meta-chips{ display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 0; }
+  .chip{
+    font-size:11.5px; font-weight:800; letter-spacing:.4px;
+    text-transform:uppercase; padding:4px 11px; border-radius:999px;
+    background:#eef4fb; color:var(--navy-3); border:1px solid #d6e3f3;
+  }
+
+  .progress-block{ margin-top:18px; }
+  .progress-top{
+    display:flex; justify-content:space-between; gap:10px;
+    font-size:13px; font-weight:700; color:var(--muted); margin-bottom:8px;
+  }
+  .progress-top .count{ color:var(--navy-3); }
+  .progress-sub{ font-size:12px; color:var(--muted); margin:7px 0 0; font-weight:600; }
+  .bar{ height:10px; background:#e6ebf1; border-radius:999px; overflow:hidden; }
+  .bar-fill{
+    height:100%; width:0%; border-radius:999px;
+    background:linear-gradient(90deg,#1d4e89,#2f7fd1);
+    transition:width .25s ease;
+  }
+
+  /* ================= SECTION BAR ================= */
+  .section-bar{
+    background:linear-gradient(135deg,#0b2545,#1d4e89);
+    color:#fff; border-radius:12px;
+    padding:15px 18px; margin:26px 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .section-bar h2{ color:#fff; font-size:17px; margin:0 0 3px; }
+  .section-bar p{ margin:0; font-size:12.5px; color:#c8d6e5; letter-spacing:.2px; }
+
+  /* ================= QUESTION CARDS ================= */
+  .q-card{
+    background:#fff; border:1px solid var(--line);
+    border-radius:12px; box-shadow:var(--shadow);
+    padding:18px; margin:0 0 14px;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .q-card.unanswered,
+  .q-block.unanswered{
+    border-color:#e0a800;
+    box-shadow:0 0 0 3px rgba(224,168,0,.16);
+  }
+
+  .q-legend{ margin:0; padding:0; }
+  .q-num{
+    display:block; font-size:11.5px; font-weight:800;
+    letter-spacing:.8px; text-transform:uppercase;
+    color:var(--navy-3); margin-bottom:5px;
+  }
+  .q-text{
+    display:block; font-size:16px; font-weight:700;
+    color:var(--navy); line-height:1.45;
+  }
+
+  .marks-tag{
+    display:inline-block; font-size:10.5px; font-weight:800;
+    letter-spacing:.5px; text-transform:uppercase;
+    background:#eef4fb; color:var(--navy-3);
+    border:1px solid #d6e3f3; border-radius:999px;
+    padding:1px 8px; margin-left:6px; vertical-align:middle;
+  }
+
+  .options{ display:grid; gap:9px; margin-top:14px; }
+
+  .option{
+    display:flex; align-items:flex-start; gap:11px;
+    padding:12px 14px; border:1px solid var(--line);
+    border-radius:10px; background:#fff; cursor:pointer;
+    transition:background .12s, border-color .12s; min-height:48px;
+  }
+  .option:hover{ background:#f7f9fc; border-color:#c6d2e0; }
+  .option input[type="radio"]{
+    flex:none; width:18px; height:18px; margin:3px 0 0;
+    accent-color:var(--navy-3); cursor:pointer;
+  }
+  .option-letter{
+    flex:none; font-weight:800; color:var(--navy-3);
+    min-width:16px; font-size:14.5px; line-height:1.55;
+  }
+  .option-text{ flex:1; font-size:15px; line-height:1.5; }
+  .option.selected{ border-color:var(--navy-3); background:#eef4fb; }
+
+  /* ================= WRITTEN QUESTIONS ================= */
+  .q-block{
+    background:#fff; border:1px solid var(--line);
+    border-radius:12px; box-shadow:var(--shadow);
+    padding:18px; margin:0 0 14px;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .qb-text{
+    font-size:15.5px; font-weight:700; color:var(--navy);
+    line-height:1.5; margin:0 0 6px;
+  }
+  .scripture-ref{
+    font-size:12.5px; font-weight:800; color:var(--navy-3);
+    letter-spacing:.5px; text-transform:uppercase; margin:0 0 6px;
+  }
+  .parts{
+    margin:8px 0 12px; padding-left:18px;
+    font-size:14.5px; color:#2c3e50;
+  }
+  .parts li{ margin-bottom:4px; }
+  .hint{ font-size:12.5px; color:var(--muted); margin:0 0 10px; }
+
+  .wc{
+    font-size:12.5px; font-weight:700; color:var(--muted);
+    margin:7px 0 0; letter-spacing:.2px;
+  }
+  .wc.ok{ color:var(--green); }
+  .wc.low{ color:var(--amber); }
+
+  /* ================= RESULTS ================= */
+  .result-head{ text-align:center; margin-bottom:6px; }
+  .brand-line{
+    font-size:13px; font-weight:800; letter-spacing:.6px;
+    color:var(--navy-3); text-transform:uppercase; margin:0 0 6px;
+  }
+  .result-head h2{ font-size:20px; margin-bottom:4px; }
+  .result-head .muted{ font-size:13px; margin:0; }
+
+  .status-banner{
+    border-radius:12px; padding:18px 16px; text-align:center;
+    margin:18px 0; border:1px solid;
+  }
+  .status-banner h3{
+    margin:0 0 4px; font-size:18px; letter-spacing:.7px; font-weight:800;
+  }
+  .status-banner p{ margin:0; font-size:13.5px; font-weight:600; opacity:.95; }
+  .status-banner.pass{ background:var(--green-bg); border-color:var(--green-line); color:var(--green); }
+  .status-banner.pending{ background:var(--amber-bg); border-color:var(--amber-line); color:var(--amber); }
+
+  .details-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr));
+    gap:10px; margin-bottom:16px;
+  }
+  .detail{
+    background:#fbfcfe; border:1px solid var(--line);
+    border-radius:10px; padding:10px 13px;
+  }
+  .detail .lbl{
+    display:block; font-size:10.5px; font-weight:800;
+    letter-spacing:.7px; text-transform:uppercase;
+    color:var(--muted); margin-bottom:2px;
+  }
+  .detail .val{
+    display:block; font-size:14.5px; font-weight:700;
+    color:var(--navy); word-break:break-word;
+  }
+
+  .score-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:10px; margin-bottom:16px;
+  }
+  .score-box{
+    background:#fbfcfe; border:1px solid var(--line);
+    border-radius:12px; padding:15px 10px; text-align:center;
+  }
+  .score-box .num{
+    font-size:25px; font-weight:800; color:var(--navy); line-height:1.15;
+  }
+  .score-box .cap{
+    font-size:10.5px; font-weight:800; letter-spacing:.6px;
+    text-transform:uppercase; color:var(--muted); margin-top:5px;
+  }
+  .score-box .cap-2{
+    display:block; font-size:11px; color:var(--muted);
+    font-weight:600; margin-top:2px; text-transform:none; letter-spacing:0;
+  }
+
+  .result-message{
+    background:#f7f9fc; border-left:4px solid var(--navy-3);
+    border-radius:8px; padding:13px 15px;
+    font-size:14.5px; color:#22384f; margin-bottom:12px;
+  }
+
+  .checkline{
+    display:flex; align-items:flex-start; gap:9px;
+    font-size:13.5px; color:var(--muted); margin-top:12px;
+    cursor:pointer; font-weight:600;
+  }
+  .checkline input{
+    width:18px; height:18px; margin:2px 0 0;
+    accent-color:var(--navy-3); flex:none; cursor:pointer;
+  }
+
+  .disclaimer{
+    margin:18px 0 0; padding-top:14px;
+    border-top:1px dashed var(--line);
+    font-size:12.5px; color:var(--muted);
+  }
+  .disclaimer strong{ color:var(--navy); }
+
+  .print-footer{
+    margin-top:12px; padding-top:8px;
+    border-top:1px solid #bbb; font-size:10.5px;
+    color:#444; text-align:center;
+  }
+
+  /* ================= REVIEW ================= */
+  .review-item{
+    border:1px solid var(--line); border-left:5px solid #cbd5e1;
+    border-radius:10px; padding:14px 15px; margin-bottom:12px;
+    background:#fff;
+  }
+  .review-item.correct{ border-left-color:var(--green); background:#fbfefc; }
+  .review-item.incorrect{ border-left-color:var(--red); background:#fffbfb; }
+  .review-item:last-child{ margin-bottom:0; }
+
+  .review-top{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:10px; flex-wrap:wrap; margin-bottom:8px;
+  }
+  .review-q{
+    font-size:11.5px; font-weight:800; letter-spacing:.7px;
+    text-transform:uppercase; color:var(--navy-3);
+  }
+  .badge{
+    font-size:11.5px; font-weight:800; padding:3px 10px;
+    border-radius:999px; letter-spacing:.3px; white-space:nowrap;
+  }
+  .badge-correct{ background:var(--green-bg); color:var(--green); border:1px solid var(--green-line); }
+  .badge-incorrect{ background:var(--red-bg); color:var(--red); border:1px solid var(--red-line); }
+
+  .review-text{
+    font-size:15px; font-weight:700; color:var(--navy);
+    margin:0 0 10px; line-height:1.45;
+  }
+  .review-line{
+    font-size:13.5px; margin:0 0 6px; color:#2c3e50; line-height:1.5;
+  }
+  .tag{
+    display:inline-block; font-size:10.5px; font-weight:800;
+    letter-spacing:.5px; text-transform:uppercase;
+    padding:2px 8px; border-radius:6px; margin-right:6px;
+  }
+  .tag-your{ background:#eef4fb; color:var(--navy-3); border:1px solid #d6e3f3; }
+  .tag-correct{ background:var(--green-bg); color:var(--green); border:1px solid var(--green-line); }
+
+  .review-exp{
+    font-size:13.5px; color:#3a4a5a; background:#f7f9fc;
+    border-radius:8px; padding:10px 12px; margin:10px 0 0; line-height:1.55;
+  }
+  .review-exp strong{ color:var(--navy); }
+
+  /* ================= SUBMISSION (WRITTEN ANSWERS) ================= */
+  .sub-item{
+    border:1px solid var(--line); border-left:5px solid var(--navy-3);
+    border-radius:10px; padding:14px 15px; margin-bottom:12px; background:#fff;
+  }
+  .sub-item:last-child{ margin-bottom:0; }
+  .sub-head{
+    font-size:11.5px; font-weight:800; letter-spacing:.7px;
+    text-transform:uppercase; color:var(--navy-3); margin:0 0 6px;
+  }
+  .sub-q{
+    font-size:14px; font-weight:700; color:var(--navy);
+    margin:0 0 8px; line-height:1.45;
+  }
+  .sub-a{
+    font-size:14px; color:#2c3e50; margin:0;
+    white-space:pre-wrap; word-break:break-word;
+    background:#f7f9fc; border-radius:8px; padding:11px 13px; line-height:1.6;
+  }
+
+  /* ================= FOOTER ================= */
+  .site-footer{
+    background:var(--navy); color:#c8d6e5;
+    padding:24px 0; margin-top:10px;
+  }
+  .foot-brand{
+    color:#fff; font-weight:800; font-size:15px;
+    margin:0 0 6px; letter-spacing:.3px;
+  }
+  .foot-line{ font-size:13.5px; margin:0 0 10px; color:#e2ebf3; }
+  .foot-note{ font-size:11.5px; margin:0; color:#8fa7bf; letter-spacing:.2px; }
+
+  .noscript{
+    background:var(--red-bg); border:1px solid var(--red-line);
+    color:var(--red); padding:16px; border-radius:12px;
+    font-weight:700; margin:20px 0;
+  }
+
+  /* ================= SMALL SCREENS ================= */
+  @media (max-width:520px){
+    h1{ font-size:21px; }
+    .card{ padding:17px; border-radius:12px; }
+    .q-card,.q-block{ padding:15px; }
+    .btn-row .btn{ flex:1 1 100%; }
+    .logo-text small{ font-size:10.5px; }
+    .logo-mark{ width:40px; height:40px; font-size:13px; }
+    .score-box .num{ font-size:22px; }
+    .result-head h2{ font-size:18px; }
+    .status-banner h3{ font-size:16px; }
+    .option-text{ font-size:14.5px; }
+    main{ padding:16px 0 30px; }
+    .section-bar{ padding:13px 15px; }
+    .section-bar h2{ font-size:15.5px; }
+  }
+
+  /* ================= PRINT ================= */
+  @media print{
+    @page{ size:A4; margin:12mm; }
+
+    html, body{ background:#fff !important; }
+    body{ font-size:11.5px; line-height:1.45; color:#000; }
+
+    .site-header{
+      background:#fff !important; color:#0b2545 !important;
+      box-shadow:none !important; padding:0 0 8px !important;
+      border-bottom:2px solid #0b2545; margin-bottom:10px;
+    }
+    .logo-mark{
+      background:#0b2545 !important; color:#fff !important;
+      border-color:#0b2545 !important;
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    }
+    .logo-text strong{ color:#0b2545 !important; }
+    .logo-text small{ color:#333 !important; opacity:1 !important; }
+    .batch-chip{
+      background:#fff !important; border-color:#0b2545 !important;
+      color:#0b2545 !important;
+    }
+
+    #welcome, #assessment, .no-print, .site-footer{ display:none !important; }
+
+    #reviewCard, #submissionCard{ display:none !important; }
+    body.print-review #reviewCard{ display:block !important; page-break-before:always; }
+    body.print-written #submissionCard{ display:block !important; page-break-before:always; }
+
+    .card{
+      box-shadow:none !important; border:1px solid #bbb !important;
+      border-radius:6px !important; margin:0 0 8px !important;
+      padding:10px 12px !important;
+      page-break-inside:avoid; break-inside:avoid;
+    }
+    #reviewCard, #submissionCard{
+      border:0 !important; padding:0 !important; background:#fff !important;
+    }
+
+    .status-banner, .score-box, .detail, .review-item, .sub-item{
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    }
+    .status-banner{ padding:10px !important; margin:10px 0 !important; }
+    .status-banner h3{ font-size:14px !important; }
+    .status-banner p{ font-size:10.5px !important; }
+    .score-grid, .details-grid{ gap:6px !important; margin-bottom:10px !important; }
+    .score-box .num{ font-size:18px !important; }
+    .result-message{ font-size:11px !important; padding:9px 11px !important; }
+    .disclaimer{ font-size:9.5px !important; margin-top:10px !important; padding-top:8px !important; }
+
+    .review-item, .sub-item{
+      page-break-inside:avoid; break-inside:avoid;
+      margin-bottom:7px !important; padding:9px 10px !important;
+    }
+    .review-text, .sub-q{ font-size:11px !important; }
+    .review-exp, .sub-a{ font-size:10.5px !important; padding:7px 9px !important; }
+
+    .print-only{ display:block !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true">CDG</span>
+      <span class="logo-text">
+        <strong>Christian Daily Guide 📜</strong>
+        <small>Principled Leadership Assessment Portal</small>
+      </span>
+    </div>
+    <span class="batch-chip">Batch 2</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <noscript>
+    <div class="noscript">
+      This assessment portal requires JavaScript. Please enable JavaScript in your browser and reload the page.
+    </div>
+  </noscript>
+
+  <!-- ============================================================
+       WELCOME / REGISTRATION
+       ============================================================ -->
+  <section id="welcome" class="card" aria-labelledby="welcomeHeading">
+    <span class="kicker">21-Day Principled Leadership Course</span>
+    <h1 id="welcomeHeading">Final Assessment — Batch 2</h1>
+    <p class="muted" style="margin-top:-4px;">Christian Daily Guide 📜 &middot; Principled Leadership Assessment Portal</p>
+
+    <p class="lead">
+      Welcome, and congratulations on completing the 21-Day Principled Leadership Course.
+      This final assessment has four sections — multiple choice, short answers, biblical
+      understanding, and practical leadership reflection. Answer every question honestly and
+      in your own words, then submit to see your Section A result and a full answer review.
+    </p>
+
+    <ul class="info-list">
+      <li><span>Course</span><strong>21-Day Principled Leadership Course</strong></li>
+      <li><span>Batch</span><strong>Batch 2</strong></li>
+      <li><span>Duration</span><strong>45 minutes</strong></li>
+      <li><span>Total marks</span><strong>100</strong></li>
+    </ul>
+
+    <form id="regForm" novalidate>
+      <div class="field">
+        <label class="flabel" for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g. Grace Okafor"
+               autocomplete="name" maxlength="80" required aria-required="true"
+               aria-describedby="nameError">
+        <p class="error" id="nameError" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label class="flabel" for="groupNumber">Group number <span class="muted small">(optional)</span></label>
+        <input type="text" id="groupNumber" name="groupNumber" placeholder="e.g. Group 3"
+               maxlength="40" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label class="flabel" for="participantId">Participant ID <span class="muted small">(optional)</span></label>
+        <input type="text" id="participantId" name="participantId" placeholder="e.g. CDG-B2-014"
+               maxlength="40" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Start Assessment</button>
+    </form>
+
+    <div class="notice">
+      <h3>Important — please read before you begin</h3>
+      <ul>
+        <li><strong>Section A (20 marks)</strong> is multiple choice and is marked automatically in your browser.</li>
+        <li><strong>Sections B, C and D (80 marks)</strong> are written answers. They are <strong>not</strong> marked automatically — they are recorded and printed for review by the CDG administrator.</li>
+        <li>Nothing is sent to the CDG administrator and nothing is stored in a central database. If you close or refresh the page, your answers are lost — print or save your submission first.</li>
+        <li>Browser-side answers can be inspected or manipulated. This is a learning and self-assessment tool, <strong>not</strong> a secure examination platform.</li>
+        <li>Your printout is a personal submission record only. It is <strong>not</strong> an official certificate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ASSESSMENT
+       ============================================================ -->
+  <section id="assessment" class="hidden" aria-labelledby="assessHeading">
+
+    <div class="card">
+      <div class="assess-head">
+        <div>
+          <h2 id="assessHeading" style="margin-bottom:4px;">Final Assessment</h2>
+          <p class="assess-who" id="assessWho"></p>
+        </div>
+      </div>
+
+      <div class="meta-chips">
+        <span class="chip">Duration: 45 minutes</span>
+        <span class="chip">Total marks: 100</span>
+        <span class="chip">All questions compulsory</span>
+      </div>
+
+      <div class="progress-block">
+        <div class="progress-top">
+          <span>Overall progress</span>
+          <span class="count" id="progressCount" aria-live="polite">0/23 items complete</span>
+        </div>
+        <div class="bar" id="progressBar" role="progressbar"
+             aria-valuemin="0" aria-valuemax="23" aria-valuenow="0"
+             aria-label="Number of assessment items completed">
+          <div class="bar-fill" id="barFill"></div>
+        </div>
+        <p class="progress-sub" id="progressSub">Section A: 0/10 answered &middot; Written answers: 0/13</p>
+      </div>
+    </div>
+
+    <form id="assessmentForm" novalidate>
+
+      <!-- SECTION A -->
+      <div class="section-bar">
+        <h2>Section A — Multiple-Choice Questions</h2>
+        <p>10 questions &times; 2 marks = 20 marks &middot; Choose one correct answer per question.</p>
+      </div>
+      <div id="sectionAList"></div>
+
+      <!-- SECTION B -->
+      <div class="section-bar">
+        <h2>Section B — Short-Answer Questions</h2>
+        <p>5 questions &times; 6 marks = 30 marks &middot; Answer briefly and clearly in your own words.</p>
+      </div>
+      <div id="sectionBList"></div>
+
+      <!-- SECTION C -->
+      <div class="section-bar">
+        <h2>Section C — Biblical Understanding and Application</h2>
+        <p>4 questions &times; 5 marks = 20 marks &middot; Support your answers with the passages given.</p>
+      </div>
+      <div id="sectionCList"></div>
+
+      <!-- SECTION D -->
+      <div class="section-bar">
+        <h2>Section D — Practical Leadership and Personal Reflection</h2>
+        <p>3 questions &times; 10 marks = 30 marks &middot; Answer thoughtfully and use practical examples.</p>
+      </div>
+      <div id="sectionDList"></div>
+
+      <!-- DECLARATION -->
+      <div class="section-bar">
+        <h2>Final Declaration</h2>
+        <p>Complete the statement below in your own words.</p>
+      </div>
+      <div id="sectionEList"></div>
+
+      <!-- SUBMIT -->
+      <div class="card submit-card">
+        <p class="error" id="submitError" role="alert" hidden></p>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Submit Assessment</button>
+          <button type="button" class="btn btn-ghost" id="restartBtn1">Restart Assessment</button>
+        </div>
+        <p class="muted small" style="margin:14px 0 0;">
+          Every question in Sections A, B, C and D, plus the Final Declaration, must be completed
+          before you can submit. Section A is marked instantly; written answers are prepared for
+          the administrator's review.
+        </p>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- ============================================================
+       RESULTS
+       ============================================================ -->
+  <section id="results" class="hidden" aria-labelledby="resultsHeading">
+
+    <div class="card result-card" id="resultCard">
+      <div class="result-head">
+        <p class="brand-line">Christian Daily Guide 📜</p>
+        <h2 id="resultsHeading">Final Assessment — Submission Summary</h2>
+        <p class="muted">21-Day Principled Leadership Course &middot; Batch 2</p>
+      </div>
+
+      <div class="status-banner pass" id="statusBanner" role="status">
+        <h3 id="statusTitle">SUBMISSION COMPLETE</h3>
+        <p id="statusNote">All 23 items answered.</p>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail">
+          <span class="lbl">Participant</span>
+          <span class="val" id="rName">—</span>
+        </div>
+        <div class="detail" id="rGroupWrap">
+          <span class="lbl">Group Number</span>
+          <span class="val" id="rGroup">—</span>
+        </div>
+        <div class="detail" id="rIdWrap">
+          <span class="lbl">Participant ID</span>
+          <span class="val" id="rId">—</span>
+        </div>
+        <div class="detail">
+          <span class="lbl">Course</span>
+          <span class="val">21-Day Principled Leadership Course</span>
+        </div>
+        <div class="detail">
+          <span class="lbl">Batch</span>
+          <span class="val">Batch 2</span>
+        </div>
+        <div class="detail">
+          <span class="lbl">Date Submitted</span>
+          <span class="val" id="rDate">—</span>
+        </div>
+        <div class="detail">
+          <span class="lbl">Time Used</span>
+          <span class="val" id="rTime">—</span>
+        </div>
+        <div class="detail">
+          <span class="lbl">Total Marks</span>
+          <span class="val">100</span>
+        </div>
+      </div>
+
+      <div class="score-grid">
+        <div class="score-box">
+          <div class="num" id="rSectionA">0/20</div>
+          <div class="cap">Section A</div>
+          <span class="cap-2">Marked automatically</span>
+        </div>
+        <div class="score-box">
+          <div class="num" id="rWritten">0/13</div>
+          <div class="cap">Written Answers</div>
+          <span class="cap-2">Submitted for review</span>
+        </div>
+        <div class="score-box">
+          <div class="num" id="rPending">80</div>
+          <div class="cap">Marks Pending</div>
+          <span class="cap-2">Sections B, C &amp; D</span>
+        </div>
+      </div>
+
+      <p class="result-message" id="rMessage"></p>
+
+      <div class="notice no-print" style="margin-top:0;">
+        <h3>How your final result is determined</h3>
+        <ul>
+          <li>Section A is marked instantly in your browser: 2 marks per correct answer, 20 marks total.</li>
+          <li>Sections B, C and D contain written answers worth 80 marks. These cannot be marked by a browser and are reviewed by the CDG administrator.</li>
+          <li>Your final total and pass/fail status are therefore <strong>not</strong> shown here. Print or save this submission and send it to the administrator for marking.</li>
+        </ul>
+      </div>
+
+      <div class="btn-row no-print">
+        <button type="button" class="btn btn-primary" id="printBtn">Print / Save Submission</button>
+        <button type="button" class="btn btn-ghost" id="restartBtn2">Restart Assessment</button>
+      </div>
+
+      <div class="no-print">
+        <label class="checkline" for="includeReview">
+          <input type="checkbox" id="includeReview" checked>
+          <span>Include the Section A answer review in the printout</span>
+        </label>
+        <label class="checkline" for="includeWritten">
+          <input type="checkbox" id="includeWritten" checked>
+          <span>Include my written answers in the printout (recommended — needed for marking)</span>
+        </label>
+      </div>
+
+      <p class="disclaimer">
+        <strong>Note:</strong> This submission was prepared locally in your browser. It has not been
+        sent to the CDG administrator, is not stored in a central database, and is not an official
+        certificate or independently verified proof of completion.
+      </p>
+
+      <p class="print-only print-footer">
+        Christian Daily Guide 📜 &middot; Principled Leadership Assessment Portal &middot; Batch 2<br>
+        Growing in character. Leading through service. Remaining faithful to Christ.
+      </p>
+    </div>
+
+    <div class="card" id="reviewCard">
+      <h2>Section A — Answer Review</h2>
+      <p class="muted small" style="margin-top:-4px;">
+        Correct answers are highlighted in green, incorrect answers in red.
+      </p>
+      <div id="reviewContainer"></div>
+    </div>
+
+    <div class="card" id="submissionCard">
+      <h2>Written Answers Submitted</h2>
+      <p class="muted small" style="margin-top:-4px;">
+        These answers are recorded for review by the CDG administrator.
+      </p>
+      <div id="submissionContainer"></div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-brand">Christian Daily Guide 📜</p>
+    <p class="foot-line">Growing in character. Leading through service. Remaining faithful to Christ.</p>
+    <p class="foot-note">Principled Leadership Assessment Portal &middot; Batch 2 &middot; Version 1 (frontend prototype)</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     SECTION A — MULTIPLE CHOICE (10 × 2 = 20 marks)
+     correct = index of the correct option (0-based)
+     ========================================================= */
+  var SECTION_A = [
+    {
+      text: "What is the foundation of principled Christian leadership?",
+      options: [
+        "Position and authority",
+        "Popularity among people",
+        "God's Word and godly character",
+        "Personal success"
+      ],
+      correct: 2,
+      explanation: "Principled Christian leadership is built on God's Word and godly character — not on position, popularity or personal success. An overseer must hold firmly to the trustworthy message and be blameless (Titus 1:7–9; Psalm 119:105)."
+    },
+    {
+      text: "According to Mark 10:43–45, what should characterise a Christian leader?",
+      options: [
+        "The ability to control others",
+        "A willingness to serve others",
+        "The pursuit of recognition",
+        "The demand for respect"
+      ],
+      correct: 1,
+      explanation: "In Mark 10:43–45 Jesus says, \"Whoever wants to become great among you must be your servant... For even the Son of Man did not come to be served, but to serve.\" Greatness in Christ's kingdom is measured by service, not control."
+    },
+    {
+      text: "What does integrity mean in leadership?",
+      options: [
+        "Doing what is right even when nobody is watching",
+        "Pleasing everyone at all costs",
+        "Hiding mistakes to protect one's reputation",
+        "Avoiding responsibility"
+      ],
+      correct: 0,
+      explanation: "Integrity is consistency between what you believe, say and do — especially when no one is watching. God desires truth in the inward being (Psalm 51:6), and the integrity of the upright guides them (Proverbs 11:3)."
+    },
+    {
+      text: "Which of the following demonstrates accountability?",
+      options: [
+        "Blaming others for personal mistakes",
+        "Ignoring correction",
+        "Refusing to explain one's decisions",
+        "Accepting responsibility for one's actions"
+      ],
+      correct: 3,
+      explanation: "Accountability means answering for your actions and accepting responsibility instead of shifting blame. Whoever conceals their sins does not prosper, but whoever confesses and renounces them finds mercy (Proverbs 28:13; Romans 14:12)."
+    },
+    {
+      text: "According to Luke 16:10, what does faithfulness in small things demonstrate?",
+      options: [
+        "That small responsibilities are unimportant",
+        "That recognition should come first",
+        "Trustworthiness in handling greater responsibility",
+        "That a leader should avoid difficult tasks"
+      ],
+      correct: 2,
+      explanation: "Luke 16:10 says, \"Whoever can be trusted with very little can also be trusted with much.\" Faithfulness in small matters proves readiness for greater responsibility."
+    },
+    {
+      text: "What should a principled leader do when they make a mistake?",
+      options: [
+        "Pretend nothing happened",
+        "Acknowledge the mistake, correct it, and learn from it",
+        "Blame a team member",
+        "Hide the truth"
+      ],
+      correct: 1,
+      explanation: "Owning a mistake, correcting it and learning from it builds trust. Cover-ups and blame-shifting damage relationships and witness (Proverbs 28:13; 1 John 1:9)."
+    },
+    {
+      text: "Which of these is an example of servant leadership?",
+      options: [
+        "Expecting others to do everything",
+        "Using authority to intimidate people",
+        "Seeking praise for every good deed",
+        "Serving others with humility and love"
+      ],
+      correct: 3,
+      explanation: "Servant leadership means serving others with humility and love, following Christ's own example (Mark 10:45; Philippians 2:3–5)."
+    },
+    {
+      text: "What is the best way to handle disagreement among team members?",
+      options: [
+        "Listen fairly and seek a peaceful resolution",
+        "Take sides immediately",
+        "Ignore the issue permanently",
+        "Publicly embarrass those involved"
+      ],
+      correct: 0,
+      explanation: "A principled leader listens fairly to both sides and pursues truth and peace. The first to present his case seems right until another comes forward and questions him (Proverbs 18:17); blessed are the peacemakers (Matthew 5:9)."
+    },
+    {
+      text: "A Christian leader should lead by example rather than words alone.",
+      options: [
+        "True",
+        "False"
+      ],
+      correct: 0,
+      explanation: "This statement is true. Leaders reproduce what they are, not merely what they say. Paul wrote, \"Follow my example, as I follow the example of Christ\" (1 Corinthians 11:1; 1 Peter 5:2–3)."
+    },
+    {
+      text: "What should motivate a Christian leader's service?",
+      options: [
+        "Competition with other leaders",
+        "The desire for fame",
+        "Love for God and people",
+        "The desire to control others"
+      ],
+      correct: 2,
+      explanation: "Love for God and for people is the true motive for Christian service — loving God with all your heart and your neighbour as yourself (Matthew 22:37–39; 2 Corinthians 5:14)."
+    }
+  ];
+
+  /* =========================================================
+     SECTION B — SHORT ANSWER (5 × 6 = 30 marks)
+     ========================================================= */
+  var SECTION_B = [
+    {
+      marks: 6,
+      min: 25,
+      text: "In your own words, explain what principled Christian leadership means.",
+      hint: "Write 2–4 sentences. Mention God's Word, character and service."
+    },
+    {
+      marks: 6,
+      min: 30,
+      text: "Mention and explain three qualities every Christian leader should possess.",
+      hint: "Name each quality and explain it in one or two sentences."
+    },
+    {
+      marks: 6,
+      min: 25,
+      text: "What is the difference between being a leader by position and being a leader by character?",
+      hint: "Contrast title and authority with influence and example."
+    },
+    {
+      marks: 6,
+      min: 25,
+      text: "Explain why accountability is important in Christian leadership.",
+      hint: "Consider trust, growth, correction and protection of others."
+    },
+    {
+      marks: 6,
+      min: 25,
+      text: "Mention three practical ways a Christian leader can demonstrate faithfulness in everyday responsibilities.",
+      hint: "Give three concrete, practical actions."
+    }
+  ];
+
+  /* =========================================================
+     SECTION C — BIBLICAL UNDERSTANDING (4 × 5 = 20 marks)
+     ========================================================= */
+  var SECTION_C = [
+    {
+      marks: 5,
+      min: 30,
+      ref: "Mark 10:43–45",
+      text: "What does Jesus teach about greatness and service in this passage? How can a CDG administrator apply this teaching?",
+      hint: "Explain the teaching, then give one practical application."
+    },
+    {
+      marks: 5,
+      min: 30,
+      ref: "Luke 16:10",
+      text: "Explain the meaning of being faithful in little things. Give one practical example from your responsibilities as an administrator.",
+      hint: "Explain the principle, then give a concrete example."
+    },
+    {
+      marks: 5,
+      min: 30,
+      ref: "Proverbs 11:3",
+      text: "The verse teaches that the integrity of the upright guides them. Explain how integrity can guide a leader when making a difficult decision.",
+      hint: "Describe a difficult decision and how integrity shapes it."
+    },
+    {
+      marks: 5,
+      min: 30,
+      ref: "Galatians 6:9",
+      text: "How can this passage encourage an administrator who feels tired, discouraged, or unappreciated while serving?",
+      hint: "Explain the promise in the verse and how it strengthens perseverance."
+    }
+  ];
+
+  /* =========================================================
+     SECTION D — PRACTICAL LEADERSHIP & REFLECTION (3 × 10 = 30)
+     ========================================================= */
+  var SECTION_D = [
+    {
+      marks: 10,
+      min: 50,
+      text: "Leadership Challenge — Imagine that an administrator in Christian Daily Guide repeatedly fails to perform assigned duties and does not communicate with the team. As a fellow administrator or leader:",
+      parts: [
+        "a. How would you address the situation?",
+        "b. How would you balance correction with love and understanding?",
+        "c. What biblical principle would guide your response?"
+      ],
+      hint: "Answer all three parts (a, b and c) in your response."
+    },
+    {
+      marks: 10,
+      min: 50,
+      text: "Integrity and Accountability — Suppose you publish incorrect information in a CDG group, and several members have already read it. You realise your mistake, but admitting it may embarrass you. What would you do, and why? Explain how your response would reflect Christian character.",
+      hint: "State your action, your reason, and the character it reflects."
+    },
+    {
+      marks: 10,
+      min: 50,
+      text: "Personal Leadership Evaluation — Reflect on your participation in the 21-Day Principled Leadership Course:",
+      parts: [
+        "a. What is the most important lesson you have learned?",
+        "b. Which area of your leadership character needs the most improvement?",
+        "c. What three practical steps will you take to become a more faithful, accountable, and Christ-centred leader?"
+      ],
+      hint: "Answer all three parts (a, b and c) in your response."
+    }
+  ];
+
+  /* =========================================================
+     FINAL DECLARATION (required, not marked)
+     ========================================================= */
+  var DECLARATION = {
+    marks: 0,
+    min: 20,
+    text: "Complete the statement below in your own words:",
+    parts: ["\"As a Christian Daily Guide administrator, I commit myself to...\""],
+    hint: "Write your personal commitment in one or two sentences."
+  };
+
+  /* =========================================================
+     STATE
+     ========================================================= */
+  var TOTAL_ITEMS = 10 + SECTION_B.length + SECTION_C.length + SECTION_D.length + 1; // 23
+  var WRITTEN_TOTAL = SECTION_B.length + SECTION_C.length + SECTION_D.length + 1;     // 13
+
+  var state = {
+    name: '',
+    group: '',
+    pid: '',
+    answers: [],       // Section A, 10 entries (null or option index)
+    startedAt: null,
+    submittedAt: null,
+    sectionACorrect: 0
+  };
+
+  var els = {};
+
+  /* =========================================================
+     UTILITIES
+     ========================================================= */
+  function esc(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function letter(i) { return String.fromCharCode(65 + i); }
+
+  function countWords(str) {
+    var t = String(str || '').replace(/\s+/g, ' ').trim();
+    if (!t) { return 0; }
+    return t.split(' ').length;
+  }
+
+  function getList(prefix) {
+    if (prefix === 'b') { return SECTION_B; }
+    if (prefix === 'c') { return SECTION_C; }
+    if (prefix === 'd') { return SECTION_D; }
+    return [DECLARATION];
+  }
+
+  function parseTaId(id) {
+    var parts = String(id).split('-');
+    if (parts.length !== 3 || parts[0] !== 'ta') { return null; }
+    var idx = parseInt(parts[2], 10);
+    if (isNaN(idx)) { return null; }
+    return { prefix: parts[1], idx: idx };
+  }
+
+  function resetAnswers() {
+    state.answers = [];
+    for (var i = 0; i < SECTION_A.length; i++) { state.answers.push(null); }
+  }
+
+  /* =========================================================
+     INIT
+     ========================================================= */
+  function init() {
+    els.welcome = document.getElementById('welcome');
+    els.assessment = document.getElementById('assessment');
+    els.results = document.getElementById('results');
+
+    els.regForm = document.getElementById('regForm');
+    els.fullName = document.getElementById('fullName');
+    els.groupNumber = document.getElementById('groupNumber');
+    els.participantId = document.getElementById('participantId');
+    els.nameError = document.getElementById('nameError');
+
+    els.assessWho = document.getElementById('assessWho');
+    els.form = document.getElementById('assessmentForm');
+    els.progressCount = document.getElementById('progressCount');
+    els.progressSub = document.getElementById('progressSub');
+    els.progressBar = document.getElementById('progressBar');
+    els.barFill = document.getElementById('barFill');
+    els.submitError = document.getElementById('submitError');
+
+    els.statusBanner = document.getElementById('statusBanner');
+    els.statusTitle = document.getElementById('statusTitle');
+    els.statusNote = document.getElementById('statusNote');
+    els.rName = document.getElementById('rName');
+    els.rGroupWrap = document.getElementById('rGroupWrap');
+    els.rGroup = document.getElementById('rGroup');
+    els.rIdWrap = document.getElementById('rIdWrap');
+    els.rId = document.getElementById('rId');
+    els.rDate = document.getElementById('rDate');
+    els.rTime = document.getElementById('rTime');
+    els.rSectionA = document.getElementById('rSectionA');
+    els.rWritten = document.getElementById('rWritten');
+    els.rPending = document.getElementById('rPending');
+    els.rMessage = document.getElementById('rMessage');
+
+    els.reviewContainer = document.getElementById('reviewContainer');
+    els.submissionContainer = document.getElementById('submissionContainer');
+    els.includeReview = document.getElementById('includeReview');
+    els.includeWritten = document.getElementById('includeWritten');
+    els.printBtn = document.getElementById('printBtn');
+    els.restartBtn1 = document.getElementById('restartBtn1');
+    els.restartBtn2 = document.getElementById('restartBtn2');
+
+    resetAnswers();
+    renderAll();
+    bindEvents();
+    updateProgress();
+  }
+
+  /* =========================================================
+     RENDERING
+     ========================================================= */
+  function renderAll() {
+    renderSectionA();
+    renderWritten('b', 'sectionBList');
+    renderWritten('c', 'sectionCList');
+    renderWritten('d', 'sectionDList');
+    renderWritten('e', 'sectionEList');
+  }
+
+  function renderSectionA() {
+    var html = '';
+
+    for (var i = 0; i < SECTION_A.length; i++) {
+      var q = SECTION_A[i];
+      html += '<div class="q-card" id="qa-' + i + '" role="group" aria-labelledby="qa-label-' + i + '">';
+      html += '<p class="q-legend" id="qa-label-' + i + '">';
+      html += '<span class="q-num">Question ' + (i + 1) + ' of ' + SECTION_A.length +
+              '<span class="marks-tag">2 marks</span></span>';
+      html += '<span class="q-text">' + esc(q.text) + '</span>';
+      html += '</p>';
+      html += '<div class="options">';
+
+      for (var j = 0; j < q.options.length; j++) {
+        var inputId = 'qa' + i + '_o' + j;
+        html += '<label class="option" for="' + inputId + '">';
+        html += '<input type="radio" id="' + inputId + '" name="sa' + i + '" value="' + j + '">';
+        html += '<span class="option-letter" aria-hidden="true">' + letter(j) + '</span>';
+        html += '<span class="option-text">' + esc(q.options[j]) + '</span>';
+        html += '</label>';
+      }
+
+      html += '</div></div>';
+    }
+
+    document.getElementById('sectionAList').innerHTML = html;
+  }
+
+  function renderWritten(prefix, containerId) {
+    var list = getList(prefix);
+    var html = '';
+
+    for (var i = 0; i < list.length; i++) {
+      var q = list[i];
+
+      html += '<div class="q-block" id="qb-' + prefix + '-' + i + '">';
+
+      html += '<p class="q-num" id="qb-label-' + prefix + '-' + i + '">Question ' + (i + 1) +
+              (q.marks ? '<span class="marks-tag">' + q.marks + ' marks</span>' : '') + '</p>';
+
+      if (q.ref) {
+        html += '<p class="scripture-ref">' + esc(q.ref) + '</p>';
+      }
+
+      html += '<p class="qb-text">' + esc(q.text) + '</p>';
+
+      if (q.parts && q.parts.length) {
+        html += '<ul class="parts">';
+        for (var p = 0; p < q.parts.length; p++) {
+          html += '<li>' + esc(q.parts[p]) + '</li>';
+        }
+        html += '</ul>';
+      }
+
+      if (q.hint) {
+        html += '<p class="hint">' + esc(q.hint) + '</p>';
+      }
+
+      html += '<label class="flabel" for="ta-' + prefix + '-' + i + '">Your answer</label>';
+      html += '<textarea id="ta-' + prefix + '-' + i + '" name="ta-' + prefix + '-' + i + '" ' +
+              'rows="5" aria-describedby="wc-' + prefix + '-' + i + '" ' +
+              'placeholder="Type your answer here..."></textarea>';
+      html += '<p class="wc" id="wc-' + prefix + '-' + i + '">0 words &middot; minimum ' + q.min + '</p>';
+
+      html += '</div>';
+    }
+
+    document.getElementById(containerId).innerHTML = html;
+  }
+
+  function syncOptionStyles() {
+    var labels = document.querySelectorAll('.option');
+    for (var i = 0; i < labels.length; i++) {
+      var lbl = labels[i];
+      var input = lbl.querySelector('input[type="radio"]');
+      if (input && input.checked) {
+        lbl.classList.add('selected');
+      } else {
+        lbl.classList.remove('selected');
+      }
+    }
+  }
+
+  /* =========================================================
+     EVENTS
+     ========================================================= */
+  function bindEvents() {
+    els.regForm.addEventListener('submit', handleStart);
+
+    els.fullName.addEventListener('input', function () {
+      els.fullName.classList.remove('invalid');
+      els.nameError.hidden = true;
+      els.nameError.textContent = '';
+    });
+
+    els.form.addEventListener('change', function (e) {
+      var t = e.target;
+      if (t && t.type === 'radio' && t.name && t.name.indexOf('sa') === 0) {
+        var idx = parseInt(t.name.slice(2), 10);
+        if (!isNaN(idx) && idx >= 0 && idx < SECTION_A.length) {
+          state.answers[idx] = parseInt(t.value, 10);
+          var card = document.getElementById('qa-' + idx);
+          if (card) { card.classList.remove('unanswered'); }
+        }
+        syncOptionStyles();
+        updateProgress();
+      }
+    });
+
+    els.form.addEventListener('input', function (e) {
+      var t = e.target;
+      if (t && t.tagName === 'TEXTAREA') {
+        var info = parseTaId(t.id);
+        if (!info) { return; }
+        var list = getList(info.prefix);
+        var q = list[info.idx];
+        if (!q) { return; }
+
+        var n = countWords(t.value);
+        var wc = document.getElementById('wc-' + info.prefix + '-' + info.idx);
+        if (wc) {
+          wc.textContent = n + ' word' + (n === 1 ? '' : 's') + ' \u00B7 minimum ' + q.min;
+          wc.classList.remove('ok', 'low');
+          if (n >= q.min) { wc.classList.add('ok'); }
+          else if (n > 0) { wc.classList.add('low'); }
+        }
+
+        t.classList.remove('invalid');
+        var block = document.getElementById('qb-' + info.prefix + '-' + info.idx);
+        if (block) { block.classList.remove('unanswered'); }
+
+        updateProgress();
+      }
+    });
+
+    els.form.addEventListener('submit', handleSubmit);
+
+    els.restartBtn1.addEventListener('click', confirmRestart);
+    els.restartBtn2.addEventListener('click', confirmRestart);
+
+    els.printBtn.addEventListener('click', function () {
+      syncPrintClasses();
+      window.print();
+    });
+
+    els.includeReview.addEventListener('change', syncPrintClasses);
+    els.includeWritten.addEventListener('change', syncPrintClasses);
+  }
+
+  function syncPrintClasses() {
+    document.body.classList.toggle('print-review', els.includeReview.checked);
+    document.body.classList.toggle('print-written', els.includeWritten.checked);
+  }
+
+  /* =========================================================
+     START
+     ========================================================= */
+  function handleStart(e) {
+    e.preventDefault();
+
+    var name = els.fullName.value.replace(/\s+/g, ' ').trim();
+
+    if (name.length < 2) {
+      showNameError('Please enter your full name before starting the assessment.');
+      return;
+    }
+
+    var letters = name.replace(/[^A-Za-z\u00C0-\u024F]/g, '');
+    if (letters.length < 2) {
+      showNameError('Please enter a valid name using letters (for example: Grace Okafor).');
+      return;
+    }
+
+    els.fullName.classList.remove('invalid');
+    els.nameError.hidden = true;
+    els.nameError.textContent = '';
+
+    state.name = name;
+    state.group = els.groupNumber.value.replace(/\s+/g, ' ').trim();
+    state.pid = els.participantId.value.replace(/\s+/g, ' ').trim();
+    state.startedAt = new Date();
+
+    var who = 'Participant: <strong>' + esc(state.name) + '</strong>';
+    if (state.group) { who += ' &middot; Group: <strong>' + esc(state.group) + '</strong>'; }
+    if (state.pid) { who += ' &middot; ID: <strong>' + esc(state.pid) + '</strong>'; }
+    els.assessWho.innerHTML = who;
+
+    els.welcome.classList.add('hidden');
+    els.results.classList.add('hidden');
+    els.assessment.classList.remove('hidden');
+
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    setTimeout(function () {
+      var first = document.querySelector('#qa-0 input[type="radio"]');
+      if (first) { first.focus(); }
+    }, 350);
+  }
+
+  function showNameError(msg) {
+    els.nameError.textContent = msg;
+    els.nameError.hidden = false;
+    els.fullName.classList.add('invalid');
+    els.fullName.focus();
+  }
+
+  /* =========================================================
+     PROGRESS
+     ========================================================= */
+  function updateProgress() {
+    var aDone = 0;
+    for (var i = 0; i < state.answers.length; i++) {
+      if (state.answers[i] !== null) { aDone++; }
+    }
+
+    var wDone = 0;
+    var wTotal = 0;
+    var prefixes = ['b', 'c', 'd', 'e'];
+
+    for (var p = 0; p < prefixes.length; p++) {
+      var list = getList(prefixes[p]);
+      for (var k = 0; k < list.length; k++) {
+        wTotal++;
+        var ta = document.getElementById('ta-' + prefixes[p] + '-' + k);
+        if (ta && countWords(ta.value) >= list[k].min) { wDone++; }
+      }
+    }
+
+    var done = aDone + wDone;
+    var pct = Math.round((done / TOTAL_ITEMS) * 100);
+
+    els.progressCount.textContent = done + '/' + TOTAL_ITEMS + ' items complete';
+    els.progressSub.textContent = 'Section A: ' + aDone + '/' + SECTION_A.length +
+                                 ' answered \u00B7 Written answers: ' + wDone + '/' + wTotal;
+    els.barFill.style.width = pct + '%';
+    els.progressBar.setAttribute('aria-valuenow', String(done));
+  }
+
+  /* =========================================================
+     VALIDATION
+     ========================================================= */
+  function collectProblems() {
+    var problems = [];
+
+    // Section A
+    for (var i = 0; i < SECTION_A.length; i++) {
+      if (state.answers[i] === null) {
+        problems.push({
+          msg: 'Section A, Question ' + (i + 1) + ' is unanswered.',
+          target: 'qa-' + i,
+          input: 'qa' + i + '_o0'
+        });
+      }
+    }
+
+    // Written sections
+    var prefixes = ['b', 'c', 'd', 'e'];
+    var sectionNames = { b: 'Section B', c: 'Section C', d: 'Section D', e: 'Final Declaration' };
+
+    for (var p = 0; p < prefixes.length; p++) {
+      var prefix = prefixes[p];
+      var list = getList(prefix);
+
+      for (var k = 0; k < list.length; k++) {
+        var ta = document.getElementById('ta-' + prefix + '-' + k);
+        var n = ta ? countWords(ta.value) : 0;
+        if (n < list[k].min) {
+          var label = sectionNames[prefix];
+          var qLabel = (prefix === 'e') ? '' : ', Question ' + (k + 1);
+          problems.push({
+            msg: label + qLabel + ' needs at least ' + list[k].min + ' words (currently ' + n + ').',
+            target: 'qb-' + prefix + '-' + k,
+            input: 'ta-' + prefix + '-' + k
+          });
+        }
+      }
+    }
+
+    return problems;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    var problems = collectProblems();
+
+    if (problems.length > 0) {
+      // Clear previous highlights
+      var cards = els.form.querySelectorAll('.q-card, .q-block');
+      for (var c = 0; c < cards.length; c++) { cards[c].classList.remove('unanswered'); }
+
+      var shown = Math.min(problems.length, 6);
+      var html = '<strong>Please complete all items before submitting.</strong><ul>';
+      for (var i = 0; i < shown; i++) {
+        html += '<li>' + esc(problems[i].msg) + '</li>';
+      }
+      if (problems.length > shown) {
+        html += '<li>&hellip;and ' + (problems.length - shown) + ' more item(s).</li>';
+      }
+      html += '</ul>';
+
+      els.submitError.innerHTML = html;
+      els.submitError.hidden = false;
+
+      for (var m = 0; m < problems.length; m++) {
+        var block = document.getElementById(problems[m].target);
+        if (block) { block.classList.add('unanswered'); }
+        var input = document.getElementById(problems[m].input);
+        if (input) { input.classList.add('invalid'); }
+      }
+
+      var firstBlock = document.getElementById(problems[0].target);
+      if (firstBlock) { firstBlock.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      return;
+    }
+
+    els.submitError.hidden = true;
+    els.submitError.innerHTML = '';
+
+    var ok = window.confirm(
+      'Submit your assessment now?\n\n' +
+      'All ' + TOTAL_ITEMS + ' items have been completed. ' +
+      'Section A will be marked immediately and your written answers will be prepared for review.\n\n' +
+      'You cannot change your answers after submission.'
+    );
+    if (!ok) { return; }
+
+    finishAssessment();
+  }
+
+  /* =========================================================
+     FINISH
+     ========================================================= */
+  function finishAssessment() {
+    state.submittedAt = new Date();
+
+    var correct = 0;
+    for (var i = 0; i < SECTION_A.length; i++) {
+      if (state.answers[i] === SECTION_A[i].correct) { correct++; }
+    }
+    state.sectionACorrect = correct;
+
+    renderResults(correct);
+    renderReview();
+    renderSubmission();
+
+    document.body.classList.remove('print-review', 'print-written');
+    els.includeReview.checked = true;
+    els.includeWritten.checked = true;
+    syncPrintClasses();
+
+    els.assessment.classList.add('hidden');
+    els.welcome.classList.add('hidden');
+    els.results.classList.remove('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderResults(correct) {
+    var sectionAScore = correct * 2; // out of 20
+
+    // Status banner
+    els.statusBanner.className = 'status-banner pass';
+    els.statusTitle.textContent = 'SUBMISSION COMPLETE';
+    els.statusNote.textContent =
+      'All ' + TOTAL_ITEMS + ' items answered \u00B7 Section A marked automatically';
+
+    // Details
+    els.rName.textContent = state.name || '\u2014';
+
+    if (state.group) {
+      els.rGroup.textContent = state.group;
+      els.rGroupWrap.style.display = '';
+    } else {
+      els.rGroupWrap.style.display = 'none';
+    }
+
+    if (state.pid) {
+      els.rId.textContent = state.pid;
+      els.rIdWrap.style.display = '';
+    } else {
+      els.rIdWrap.style.display = 'none';
+    }
+
+    var now = state.submittedAt;
+    els.rDate.textContent = now.toLocaleDateString(undefined, {
+      year: 'numeric', month: 'long', day: 'numeric'
+    }) + ' at ' + now.toLocaleTimeString(undefined, {
+      hour: '2-digit', minute: '2-digit'
+    });
+
+    var minutes = 0;
+    if (state.startedAt) {
+      minutes = Math.max(1, Math.round((now.getTime() - state.startedAt.getTime()) / 60000));
+    }
+    els.rTime.textContent = minutes + ' minute' + (minutes === 1 ? '' : 's');
+
+    // Score boxes
+    els.rSectionA.textContent = sectionAScore + '/20';
+    els.rWritten.textContent = WRITTEN_TOTAL + '/' + WRITTEN_TOTAL;
+
+    // Message
+    var msg = 'Thank you for completing the Final Assessment for the 21-Day Principled Leadership Course, Batch 2. ';
+
+    if (sectionAScore >= 16) {
+      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A — a strong result on the multiple-choice questions. ';
+    } else if (sectionAScore >= 12) {
+      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A. Review the questions you missed and keep growing. ';
+    } else {
+      msg += 'You scored ' + sectionAScore + ' out of 20 in Section A. Take time to review the answer feedback below and revisit the course material. ';
+    }
+
+    msg += 'Your written answers in Sections B, C and D (80 marks) will be reviewed and marked by the CDG administrator. ' +
+           'Print or save this submission and send it to the administrator so that your final total can be completed.';
+
+    els.rMessage.textContent = msg;
+  }
+
+  /* =========================================================
+     REVIEW (SECTION A)
+     ========================================================= */
+  function renderReview() {
+    var html = '';
+
+    for (var i = 0; i < SECTION_A.length; i++) {
+      var q = SECTION_A[i];
+      var selected = state.answers[i];
+      var isCorrect = (selected === q.correct);
+
+      var yourAnswer = (selected === null || selected === undefined)
+        ? 'No answer selected'
+        : letter(selected) + '. ' + q.options[selected];
+
+      var correctAnswer = letter(q.correct) + '. ' + q.options[q.correct];
+
+      html += '<div class="review-item ' + (isCorrect ? 'correct' : 'incorrect') + '">';
+
+      html += '<div class="review-top">';
+      html += '<span class="review-q">Question ' + (i + 1) + '</span>';
+      html += '<span class="badge ' + (isCorrect ? 'badge-correct' : 'badge-incorrect') + '">' +
+              (isCorrect ? 'Correct \u00B7 +2' : 'Incorrect \u00B7 0') + '</span>';
+      html += '</div>';
+
+      html += '<p class="review-text">' + esc(q.text) + '</p>';
+
+      html += '<p class="review-line"><span class="tag tag-your">Your answer</span>' +
+              esc(yourAnswer) + '</p>';
+
+      html += '<p class="review-line"><span class="tag tag-correct">Correct answer</span>' +
+              esc(correctAnswer) + '</p>';
+
+      html += '<p class="review-exp"><strong>Leadership principle:</strong> ' +
+              esc(q.explanation) + '</p>';
+
+      html += '</div>';
+    }
+
+    els.reviewContainer.innerHTML = html;
+  }
+
+  /* =========================================================
+     SUBMISSION (WRITTEN ANSWERS)
+     ========================================================= */
+  function renderSubmission() {
+    var html = '';
+    var prefixes = ['b', 'c', 'd', 'e'];
+    var names = { b: 'Section B', c: 'Section C', d: 'Section D', e: 'Final Declaration' };
+
+    for (var p = 0; p < prefixes.length; p++) {
+      var prefix = prefixes[p];
+      var list = getList(prefix);
+
+      for (var i = 0; i < list.length; i++) {
+        var q = list[i];
+        var ta = document.getElementById('ta-' + prefix + '-' + i);
+        var answer = ta ? ta.value.replace(/\r\n/g, '\n').trim() : '';
+        var words = countWords(answer);
+
+        var heading = names[prefix];
+        if (prefix !== 'e') { heading += ' \u2014 Question ' + (i + 1); }
+        if (q.marks) { heading += ' \u00B7 ' + q.marks + ' marks'; }
+
+        html += '<div class="sub-item">';
+        html += '<p class="sub-head">' + esc(heading) + '</p>';
+        html += '<p class="sub-q">' + esc(q.text) + '</p>';
+        if (q.parts && q.parts.length) {
+          html += '<ul class="parts" style="margin:0 0 8px;font-size:13px;">';
+          for (var s = 0; s < q.parts.length; s++) {
+            html += '<li>' + esc(q.parts[s]) + '</li>';
+          }
+          html += '</ul>';
+        }
+        html += '<p class="sub-a">' + esc(answer || '(No answer provided)') + '</p>';
+        html += '<p class="wc" style="margin-top:6px;">' + words +
+                ' word' + (words === 1 ? '' : 's') + '</p>';
+        html += '</div>';
+      }
+    }
+
+    els.submissionContainer.innerHTML = html;
+  }
+
+  /* =========================================================
+     RESTART
+     ========================================================= */
+  function confirmRestart() {
+    var ok = window.confirm(
+      'Restart the assessment?\n\n' +
+      'All your current answers, your Section A result and your written responses will be cleared. ' +
+      'This cannot be undone.'
+    );
+    if (!ok) { return; }
+    resetAll();
+  }
+
+  function resetAll() {
+    resetAnswers();
+    state.name = '';
+    state.group = '';
+    state.pid = '';
+    state.startedAt = null;
+    state.submittedAt = null;
+    state.sectionACorrect = 0;
+
+    // Clear radio inputs
+    var radios = els.form.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radios.length; i++) { radios[i].checked = false; }
+    syncOptionStyles();
+
+    // Clear textareas + word counters
+    var textareas = els.form.querySelectorAll('textarea');
+    for (var t = 0; t < textareas.length; t++) {
+      textareas[t].value = '';
+      textareas[t].classList.remove('invalid');
+      var info = parseTaId(textareas[t].id);
+      if (info) {
+        var wc = document.getElementById('wc-' + info.prefix + '-' + info.idx);
+        var q = getList(info.prefix)[info.idx];
+        if (wc && q) {
+          wc.textContent = '0 words \u00B7 minimum ' + q.min;
+          wc.classList.remove('ok', 'low');
+        }
+      }
+    }
+
+    // Clear highlight classes
+    var blocks = els.form.querySelectorAll('.q-card, .q-block');
+    for (var b = 0; b < blocks.length; b++) { blocks[b].classList.remove('unanswered'); }
+
+    // Clear errors
+    els.submitError.hidden = true;
+    els.submitError.innerHTML = '';
+    els.nameError.hidden = true;
+    els.nameError.textContent = '';
+    els.fullName.classList.remove('invalid');
+
+    // Clear results content
+    els.reviewContainer.innerHTML = '';
+    els.submissionContainer.innerHTML = '';
+    els.regForm.reset();
+
+    // Reset print state
+    document.body.classList.remove('print-review', 'print-written');
+    els.includeReview.checked = true;
+    els.includeWritten.checked = true;
+
+    // Swap screens
+    els.results.classList.add('hidden');
+    els.assessment.classList.add('hidden');
+    els.welcome.classList.remove('hidden');
+
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    els.fullName.focus();
+  }
+
+  /* =========================================================
+     BOOT
+     ========================================================= */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+</body>
+</html>
